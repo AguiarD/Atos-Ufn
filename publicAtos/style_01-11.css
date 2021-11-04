@@ -1,0 +1,181 @@
+#div1-1 {
+  height: 50px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  background-color: blue;
+  margin: 5px 0;
+}
+#div1-2 {
+  height: 50px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  background-color: red;
+  margin: 5px 0;
+}
+#div1-3 {
+  height: 50px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  
+  background-color: green;
+  margin: 5px 0;
+}
+#div1-4 {
+  height: 50px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  background-color: purple;
+}
+
+/* ------------2-------------- */
+
+.flexcolumn2 {
+  height: 300px;
+  /* width: 700px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flexrow2 {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+}
+
+#div2-1 {
+  height: 50px;
+  width: 130px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  background-color: blue;
+}
+#div2-2 {
+  height: 50px;
+  width: 130px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  background-color: purple;
+}
+#div2-3 {
+  height: 50px;
+  width: 130px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  background-color: red;
+}
+#div2-4 {
+  height: 50px;
+  width: 130px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  background-color: green;
+}
+
+/* ------------3-------------- */
+
+.flexcolumn3 {
+  height: 300px;
+  /* width: 700px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flexrow3 {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+}
+
+#div3-1 {
+  height: 50px;
+  width: 130px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  background-color: blue;
+}
+#div3-2 {
+  height: 50px;
+  width: 130px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  background-color: purple;
+}
+#div3-3 {
+  height: 50px;
+  width: 130px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  background-color: red;
+}
+#div3-4 {
+  height: 50px;
+  width: 130px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  background-color: green;
+}
+
+/* ------------4-------------- */
+
+table { 
+  width: 200px;
+  height: 150px;
+  border:solid green;
+  
+}
+
+td {
+  background-color: grey;
+  color: yellow;  
+}
+
+td:hover {
+  background-color: yellow;
+  color: grey;  
+}
+
+/* ------------5-------------- */
+
+.imgparagrafo {
+  width: 60%;
+  background-color: grey;
+  display: flex;
+  justify-content: space-around;
+}
+
+.imgparagrafo img {
+  max-width: 45%;
+  margin: 5px 0 5px 5px;
+}
+
+.imgparagrafo p {
+  max-width: 45%;
+  margin: 10px 0;
+  text-align: justify;
+}
+
+.imgparagrafo hr {
+  margin: 5px 10px 5px 5px;
+}

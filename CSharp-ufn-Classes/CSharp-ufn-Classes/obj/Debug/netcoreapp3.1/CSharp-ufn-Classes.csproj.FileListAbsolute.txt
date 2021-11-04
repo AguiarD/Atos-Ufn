@@ -1,0 +1,14 @@
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\bin\Debug\netcoreapp3.1\CSharp-ufn-Classes.exe
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\bin\Debug\netcoreapp3.1\CSharp-ufn-Classes.deps.json
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\bin\Debug\netcoreapp3.1\CSharp-ufn-Classes.runtimeconfig.json
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\bin\Debug\netcoreapp3.1\CSharp-ufn-Classes.runtimeconfig.dev.json
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\bin\Debug\netcoreapp3.1\CSharp-ufn-Classes.dll
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\bin\Debug\netcoreapp3.1\CSharp-ufn-Classes.pdb
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\obj\Debug\netcoreapp3.1\CSharp-ufn-Classes.csproj.AssemblyReference.cache
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\obj\Debug\netcoreapp3.1\CSharp-ufn-Classes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\obj\Debug\netcoreapp3.1\CSharp-ufn-Classes.AssemblyInfoInputs.cache
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\obj\Debug\netcoreapp3.1\CSharp-ufn-Classes.AssemblyInfo.cs
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\obj\Debug\netcoreapp3.1\CSharp-ufn-Classes.csproj.CoreCompileInputs.cache
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\obj\Debug\netcoreapp3.1\CSharp-ufn-Classes.dll
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\obj\Debug\netcoreapp3.1\CSharp-ufn-Classes.pdb
+C:\Users\Cliente\source\repos\CSharp-ufn-Classes\CSharp-ufn-Classes\obj\Debug\netcoreapp3.1\CSharp-ufn-Classes.genruntimeconfig.cache

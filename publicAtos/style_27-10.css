@@ -1,0 +1,124 @@
+body {
+  background-color: aquamarine;
+  background-image: url(img/Harley_hdV-Rod.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 2cm;
+}
+
+h1 {
+  color: cadetblue !important; 
+  text-align: center;
+}
+
+p {
+  text-indent: 22px;
+  color: cadetblue;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.minhaclasse {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#meuparagrafo {
+  text-align: justify;
+  color: brown;
+  font-variant: small-caps;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+#textosub {
+  text-decoration: underline;
+}
+
+#textosup{
+  text-decoration: overline;
+}
+
+#textodecorado {
+  text-decoration: line-through;
+}
+
+#textospace {
+  letter-spacing: 3px;
+}
+
+#textoupper {
+  text-transform: uppercase;
+}
+
+#textolower {
+  text-transform: lowercase;
+}
+
+a:hover {
+  color: lightcoral;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  font-style: italic;
+  text-transform: uppercase;
+  background-color: green;
+}
+
+.minhadiv {
+  margin: 10px 10px 10px 10px;
+  padding: 20px 20px 20px 20px;
+  border-color: red;
+  border-width: thick;
+  border-style: dashed;
+  background-color: steelblue;
+  width: 50%;
+}
+
+#p1 {
+  margin: 10px 10px 10px 10px;
+  padding: 20px 20px 20px 20px;
+  border-color: red;
+  border-width: thick;
+  border-style: dashed;
+  background-color: steelblue;
+  float: left;
+  width: 30%;
+}
+
+#p2 {
+  margin: 10px 10px 10px 10px;
+  padding: 20px 20px 20px 20px;
+  border-color: red;
+  border-width: thick;
+  border-style: dashed;
+  background-color: steelblue;
+  float: left;
+  width: 30%;
+}
+
+#p3 {
+  margin: 10px 10px 10px 10px;
+  padding: 20px 20px 20px 20px;
+  border-color: red;
+  border-width: thick;
+  border-style: dashed;
+  background-color: steelblue;
+  float: left;
+  width: 30%;
+}
+
+#p4 {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  color: black;
+}
+
+#p5 {
+  top: 100px;
+  left: 100px;
+  position: relative;
+  color: blueviolet;
+  z-index: -1;
+}
+
