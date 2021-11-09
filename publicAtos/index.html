@@ -5,66 +5,95 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="arquivo.js">
-    // var n1 = 10;
-    // var n2 = 10.5;
-    // var n3 = 1.5e3;
-    // var n4 = 0xff;
-
-    // var t1 = "teste";
-    // var t2 = 'teste';
-
-    // var b1 = true;
-  </script>
-  <title>Document</title>
+  <script src="arquivo.js"></script>
+  <title>Aula - 08/11/2021</title>
 </head>
 
 <body>
-  <h1>Aula JavaScript</h1>
-  Digite o seu nome: <input type="text" id="nome" onfocusout="deixarcaixaalta()">
-
-  <button onclick="mostrarpares();">Mostrar Pares!</button>
-  <button onclick="mostrarsomatorio();">Somatorio!</button>
-
-  <br>
   <hr>
-  <br>
-
-  Digite o seu nome: <input type="text" id="nome">
-  <br>
-  Digite sua idade: <input type="text" id="idade">
-
-  <button onclick="mostrarnomeidade()">Exibir</button>
-
-  <br>
+  <form>
+    <h1>Exercicio 1: JavaScript</h1>
+    <button onclick="mudarCor('red');">Vermelho</button><br><br>
+    <button onclick="mudarCor('green');">Verde</button><br><br>
+    <button onclick="mudarCor('blue');">Azul</button><br><br>
+    <button onclick="mudarCor('yellow');">Amarelo</button><br><br>
+  </form>
   <hr>
-  <br>
 
-  Digite o seu nome: <input type="text" id="nomeMaiorIdade">
-  <br>
-  Digite sua idade: <input type="text" id="idadeMaiorIdade">
-
-  <button onclick="maiorDeIdade()">Exibir</button>
-
-  <br>
+  <form>
+    <h1>Exercicio 2: JavaScript</h1>
+    <a onmouseover="mudarCor('red');">Vermelho</a><br><br>
+    <a onmouseover="mudarCor('green');">Verde</a><br><br>
+    <a onmouseover="mudarCor('blue');">Azul</a><br><br>
+    <a onmouseover="mudarCor('yellow');">Amarelo</a><br><br>
+  </form>
   <hr>
-  <br>
 
-  Informe o primeiro valor: <input type="int" id="n1">
-  <br>
-  Informe o segundo valor: <input type="int" id="n2">
-
-  <button onclick="somar()">Resultado</button>
-
-  <br>
+  <h1>Exercicio 3: JavaScript</h1>
+  <input name="exercicio3" onclick="mudarCor('blue');" type="radio">Azul</input> <br> <br>
+  <input name="exercicio3" onclick="mudarCor('green');" type="radio">Verde</input> <br> <br>
+  <input name="exercicio3" onclick="mudarCor('yellow');" type="radio">Amarelo</input> <br> <br>
+  <input name="exercicio3" onclick="mudarCor('red');" type="radio">Vermelho</input> <br> <br>
   <hr>
-  <br>
 
-  Informe o primeiro valor: <input type="int" id="valor1">
-  <br>
-  Informe o segundo valor: <input type="int" id="valor2">
+  <h1>Exercicio 4: JavaScript</h1>
+  <p id="paragrafo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa quod eaque, officiis esse itaque
+    error nisi,
+    adipisci sunt rem molestiae sint quas fuga assumenda eveniet suscipit ratione similique veritatis eos.
+    Non iste quasi provident, expedita modi eum at sit quas ipsam dignissimos cumque quisquam similique iusto neque.
+    Repellendus, dolorem quas possimus, porro neque nobis voluptatem deserunt optio, et maiores officia.
+    Tempore eos rerum vitae dolores veniam pariatur provident voluptatibus porro unde alias, doloribus quis excepturi
+    asperiores molestias officiis corporis ipsum ut reiciendis perferendis deleniti. Sapiente, magni. Praesentium
+    voluptate culpa molestiae?</p>
+  <button onclick="esconderTexto()">Mudar Visibilidade</button>
+  <hr>
 
-  <button id="btn" onclick="somarMudarCorBotao()">Somar mudando a cor</button>
+  <h1>Exercicio 5: JavaScript</h1>
+  <input name="animal" type="checkbox" onclick="verificaChecks()">Cao</input><br><br>
+  <input name="animal" type="checkbox" onclick="verificaChecks()">Tartaruga</input><br><br>
+  <input name="animal" type="checkbox" onclick="verificaChecks()">Gato</input><br><br>
+  <input name="animal" type="checkbox" onclick="verificaChecks()">Periquito</input><br><br>
+  <button id="btnHabilitar" disabled>Salvar</button>
+  <hr>
+
+  <h2>Exercicio 5.1: JavaScript</h2>
+  <!--Verificar-->
+  <input name="geral" type="checkbox" onclick="checkTodos(this)">Todos</input><br><br>
+  <input name="animalTodos" type="checkbox" onclick="verificaChecksTodos();">Cao</input><br><br>
+  <input name="animalTodos" type="checkbox" onclick="verificaChecksTodos();">Tartaruga</input><br><br>
+  <input name="animalTodos" type="checkbox" onclick="verificaChecksTodos();">Gato</input><br><br>
+  <input name="animalTodos" type="checkbox" onclick="verificaChecksTodos();">Periquito</input><br><br>
+  <button id="btnHabilitar" disabled>Salvar</button>
+  <hr>
+
+
+  <h1>Exercicio 6 e 7: JavaScript</h1>
+  <p id="paragrafoCor">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem similique vero odio illo
+    inventore,
+    alias,
+    possimus velit non magnam error deleniti pariatur laboriosam sint veritatis ipsa quam delectus saepe iste.
+    Consectetur magni autem fugit? Delectus ullam saepe optio maiores suscipit iste temporibus fugiat modi provident,
+    reprehenderit blanditiis. Voluptas, alias qui? Cum eos perspiciatis odit modi similique deleniti veniam. Delectus,
+    voluptatibus.
+    Molestias aperiam modi est odit sapiente ratione, aspernatur ullam repudiandae, magni harum eligendi illum possimus
+    doloremque tempora consequuntur. Libero debitis architecto eius aspernatur saepe a ad tenetur in aperiam quisquam?
+    Autem optio ab fugit, pariatur dolorum nostrum corrupti doloribus rem accusamus sint maiores quibusdam quod
+    voluptatibus facere ipsam odio corporis laborum nobis, voluptate eaque. Incidunt libero voluptas mollitia atque ab.
+    Cum quod tempore veniam quo dolore in ab officia veritatis asperiores officiis aut laborum accusantium a non
+    deserunt, exercitationem modi! Exercitationem hic mollitia architecto ex repudiandae quasi, quis molestias vitae!
+  </p>
+  <br><br>
+  <button onclick="fonte('black');">Fonte para Preto</button><br><br>
+  <button onclick="fonte('white');">Fonte para Branco</button><br><br>
+  <button onclick="fundo('black');">Fundo para Preto</button><br><br>
+  <button onclick="fundo('white');">Fundo para Breto</button><br><br>
+  <button onclick="tamanhoMais();">+</button><br><br>
+  <button onclick="tamanhoMenos();">-</button><br><br>
+
+  <hr>
+
+  <h1>Exercicio 7: JavaScript</h1>
+
 
 </body>
 

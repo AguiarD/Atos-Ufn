@@ -98,6 +98,122 @@ namespace CSharp_ufn_Classes
         }
 
 
+
+        //******************************************************* 08/11/2021
+
+
+        private static int[] lerVetor()
+        {
+            int[] vetor = new int[10];
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("Digite o elemento " + i + " = ");
+                vetor[i] = int.Parse(Console.ReadLine());
+            }
+            return vetor;
+        }
+
+        private static void decompoeImpar(int[] vetor)
+        {
+            int i, j, ei = 0;
+            for (i = 0; i < vetor.Length; i++)
+            {
+                if (vetor[i] % 2 != 0)
+                {
+                    ei++;
+                }
+            }
+
+            int[] impar = new int[ei];
+            for (i = 0, j = 0; i < vetor.Length; i++)
+            {
+                if (vetor[i] % 2 != 0)
+                {
+                    impar[j] = vetor[i];
+                    j++;
+                }
+            }
+
+            Console.WriteLine("Elementos ímpares: ");
+            mostraVetor(impar, false);
+        }
+
+        private static void decompoePar(int[] vetor)
+        {
+            int i, j, p = 0;
+            int[] par;
+            for (i = 0; i < vetor.Length; i++)
+            {
+                if (vetor[i] % 2 == 0)
+                    p++;
+            }
+
+            par = new int[p];
+
+            for (i = 0, j = 0; i < vetor.Length; i++)
+            {
+                if (vetor[i] % 2 == 0)
+                {
+                    par[j] = vetor[i];
+                    j++;
+                }
+            }
+            Console.WriteLine("Elementos pares: ");
+            mostraVetor(par, false);
+        }
+
+        private static void decompoeIImpar(int[] vetor)
+        {
+            int[] iimpar = new int[5];
+            int i, j = 0;
+            for (i = 0; i < vetor.Length; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    iimpar[j] = vetor[i];
+                    j++;
+                }
+            }
+            Console.WriteLine("Vetor com indices ímpares: ");
+            mostraVetor(iimpar, false);
+        }
+
+        private static void mostraVetor(int[] vetor, bool inverso)
+        {
+            int i;
+            if (inverso)
+            { //==if (inverso == true) {
+                for (i = vetor.Length - 1; i >= 0; i--)
+                {
+                    Console.WriteLine("Elemento " + i + " =" + vetor[i]);
+                }
+            }
+            else
+            {
+                for (i = 0; i < vetor.Length; i++)
+                {
+                    Console.WriteLine("Elemento " + i + " = " + vetor[i]);
+                }
+            }
+        }
+
+        private static void decompoeIPar(int[] vetor)
+        {
+            int[] ipar = new int[5];
+            int i, j = 0;
+            for (i = 0; i < vetor.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    ipar[j] = vetor[i];
+                    j++;
+                }
+            }
+            Console.WriteLine("Vetor com indices pares: ");
+            mostraVetor(ipar, false);
+        }
+
+
         static void Main(string[] args)
         {
             /*int n, num1, num2, resultado;
@@ -160,7 +276,7 @@ namespace CSharp_ufn_Classes
                         break;
                 }*/
 
-            //**********************************************************
+            //********************************************************** 08/11/2021 Exercicio
 
             /*Escreva um programa que leia um vetor com 30 elementos inteiros e escreva funções para fazer o que se pede(utilizar o vetor declarado globalmente)
 
@@ -174,13 +290,30 @@ namespace CSharp_ufn_Classes
             //int[] vetor;
 
 
-            criarVetor();
+            /*//criarVetor();
+            int[] vetor = new int[10];
+            vetor = lerVetor();
+            //exibirInverso(vetor);
+            mostraVetor(vetor, true);
+            decompoeIPar(vetor);
+            decompoeIImpar(vetor);
+            decompoePar(vetor);
+            decompoeImpar(vetor);*/
 
-            for (int i = 0; i < length; i++)
-            {
+            //***************************************
 
-            }
-            
+
+            //Escrever um programa que lê um vetor double de 15 elementos.A seguir, deve mostrar cada elemento do vetor multiplicado pelo seu índice(posição), em uma função chamada cálculo.
+
+            //Escreva um programa que leia uma matriz de inteiros com ordem 10x10 e por meio de funções faça o que se pede:
+
+            //a.Exiba o menor elemento da matriz
+            //b.Encontre e exiba o maior elemento de cada uma das linhas da matriz
+
+
+
         }
+
+
     }
 }
