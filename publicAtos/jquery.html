@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // $("p").click(function () {
+      //   $(this).hide();
+      // });
+
+      // $("button").click(function () {
+      //   $("#div1").fadeToggle();
+      //   $("#div2").fadeToggle("slow");
+      //   $("#div3").fadeToggle(3000);
+      // });
+
+      $("#mudarRed").click(function () {
+        // alert("Clicou");
+        $("body").css("background", "red");
+      });
+
+    });
+  </script>
+  <title>Aula 09/11/2021 - jQuery</title>
+</head>
+
+<body>
+  <h1>Aula - 09/11/2021</h1>
+  <br><br>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat accusamus ratione dolores laudantium. Ducimus
+    harum voluptate quisquam ipsa ex molestias enim. Quae, maiores. Magnam rem itaque autem ipsa quod repellat.
+    Ratione dolores sit officiis accusamus sint consequuntur doloribus nam perferendis rerum ullam laboriosam molestias
+    enim soluta incidunt eius saepe aut suscipit repudiandae sed distinctio, cupiditate exercitationem similique atque
+    quod? Veniam?
+  </p>
+
+  <button>Clique aqui!</button>
+  <br><br>
+
+  <div id="div1" style="width:80px; height:80px; background-color: red;"></div>
+  <div id="div2" style="width:80px; height:80px; background-color: green;"></div>
+  <div id="div3" style="width:80px; height:80px; background-color: blue;"></div>
+
+  <hr>
+
+  <button id="mudarRed;">Vermelho</button><br /><br />
+  <button id="mudarGreen;">Verde</button><br /><br />
+  <button id="mudarBlue;">Azul</button><br /><br />
+  <button id="mudarYellow;">Amarelo</button><br /><br />
+
+</body>
+
+</html>

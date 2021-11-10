@@ -11,13 +11,13 @@
 
 <body>
   <hr>
-  <form>
-    <h1>Exercicio 1: JavaScript</h1>
-    <button onclick="mudarCor('red');">Vermelho</button><br><br>
-    <button onclick="mudarCor('green');">Verde</button><br><br>
-    <button onclick="mudarCor('blue');">Azul</button><br><br>
-    <button onclick="mudarCor('yellow');">Amarelo</button><br><br>
-  </form>
+  <!-- <form> -->
+  <h1>Exercicio 1: JavaScript</h1>
+  <button onclick="mudarCor('red');">Vermelho</button><br /><br />
+  <button onclick="mudarCor('green');">Verde</button><br /><br />
+  <button onclick="mudarCor('blue');">Azul</button><br /><br />
+  <button onclick="mudarCor('yellow');">Amarelo</button><br /><br />
+  <!-- </form> -->
   <hr>
 
   <form>
@@ -45,7 +45,8 @@
     Tempore eos rerum vitae dolores veniam pariatur provident voluptatibus porro unde alias, doloribus quis excepturi
     asperiores molestias officiis corporis ipsum ut reiciendis perferendis deleniti. Sapiente, magni. Praesentium
     voluptate culpa molestiae?</p>
-  <button onclick="esconderTexto()">Mudar Visibilidade</button>
+  <button onclick="esconderTexto()">Remover Visibilidade</button>
+  <button onclick="removerTexto()">Ocultar Visibilidade</button>
   <hr>
 
   <h1>Exercicio 5: JavaScript</h1>
@@ -67,7 +68,7 @@
   <hr>
 
 
-  <h1>Exercicio 6 e 7: JavaScript</h1>
+  <h1>Exercicio 6, 7 e 8: JavaScript</h1>
   <p id="paragrafoCor">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem similique vero odio illo
     inventore,
     alias,
@@ -89,10 +90,80 @@
   <button onclick="fundo('white');">Fundo para Breto</button><br><br>
   <button onclick="tamanhoMais();">+</button><br><br>
   <button onclick="tamanhoMenos();">-</button><br><br>
+  <button onclick="maiusculo();">Converter Maiúsculo</button><br><br>
+  <button onclick="minusculo();">Converter Minúsculo</button><br><br>
 
   <hr>
 
-  <h1>Exercicio 7: JavaScript</h1>
+  <h1>Exercicio 9: JavaScript</h1>
+  <form action="">
+    <label>Nome</label>
+    <input id="nome" type="text">
+    <br><br>
+    <label>Senha</label>
+    <input id="senha1" type="password">
+    <br><br>
+    <label>Confirmar Senha</label>
+    <input id="senha2" type="password">
+    <br><br>
+    <button onclick="validar()">Salvar</button>
+  </form>
+
+  <hr>
+
+  <h1>Exercicio 10: JavaScript</h1>
+  <form>
+    <label>Nome:</label>
+    <input id="nome" type="text" required>
+
+    <br><br>
+
+    <label>Tipo:</label>
+    <input type="radio" name="pessoa" onclick="alteraVisibilidade('fisica')" checked>Pessoa Fisica</input>
+    <input type="radio" name="pessoa" onclick="alteraVisibilidade('juridica')">Pessoa Juridica</input>
+
+    <br>
+
+    <div id="pessoaFisica">
+      <label>Registro PF</label>
+      <input type="text" id="cpf" onkeyup="mascara('###.###.###-##',this,event)">
+      <br><br>
+      <label>Nascimento:</label>
+      <input type=" date" id="dt">
+    </div>
+
+    <br>
+
+    <div id="pessoaJuridica">
+      <label>Registro PJ</label>
+      <input type="text" name="" id="cnpj" onkeyup="mascara('##.###.###/####-##',this,event)">
+    </div>
+
+    <br><br>
+
+    <label>Endereço</label>
+    <input type="text" id="endereco">
+
+    <br><br>
+
+    <label>CEP</label>
+    <input type="number" id="cep" onkeyup="mascara('#####-###',this,event)">
+
+    <br><br>
+
+    <label>Fone</label>
+    <input type="number" id="telefone" onkeyup="mascara('(##)####-####',this,event)">
+
+    <br><br>
+
+    <label>Fone</label>
+    <input type="email" id="email">
+
+    <br><br>
+
+    <button onclick="cadastrar()">Salvar</button>
+
+  </form>
 
 
 </body>
