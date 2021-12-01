@@ -20,7 +20,7 @@ namespace WinFormsAppADONet
 
     public class Banco
     {
-        private string stringConexao = "Data Source=localhost; Initial Catalog=ADONet; User ID=usuario; password=senha; language=Portuguese";
+        private string stringConexao = @"Data Source=localhost\MSSQLSERVER01; Initial Catalog=ADONet; User ID=usuario; password=senha; language=Portuguese";
 
         private SqlConnection cn;
 

@@ -22,10 +22,21 @@ namespace WinFormsAppADONet
             //Banco banco = new Banco();
             //banco.abrirConexao();
 
-            Programador programador = new Programador()
-            {
+            Programador programador = new Programador();
+            programador.nome = txbNome.Text;
+            programador.linguagem = txbLinguagem.Text;
+            programador.banco = txbBanco.Text;
 
+            bool retorno = programador.gravarProgramador();
+            if (retorno)
+            {
+                MessageBox.Show("Gravado com sucesso!");
             }
+            else
+            {
+                MessageBox.Show("Erro ao gravar!");
+            }
+
         }
     }
 }
