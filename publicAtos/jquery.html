@@ -8,19 +8,36 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function () {
-      // $("p").click(function () {
-      //   $(this).hide();
-      // });
+      $("p").click(function () {
+        $(this).hide();
+      });
 
-      // $("button").click(function () {
-      //   $("#div1").fadeToggle();
-      //   $("#div2").fadeToggle("slow");
-      //   $("#div3").fadeToggle(3000);
-      // });
+      $("#btn").click(function () {
+        $("#div1").fadeToggle();
+        $("#div2").fadeToggle("slow");
+        $("#div3").fadeToggle(3000);
+        alert("Clicou");
+        // $("body").css("background", "red");
+      });
 
       $("#mudarRed").click(function () {
-        // alert("Clicou");
+        alert("Clicou Vermelho");
         $("body").css("background", "red");
+      });
+
+      $("#mudarGreen").click(function () {
+        alert("Clicou Verde");
+        $("body").css("background", "green");
+      });
+
+      $("#mudarBlue").click(function () {
+        alert("Clicou Azul");
+        $("body").css("background", "blue");
+      });
+
+      $("#mudarYellow").click(function () {
+        alert("Clicou Amarelo");
+        $("body").css("background", "yellow");
       });
 
     });
@@ -39,7 +56,7 @@
     quod? Veniam?
   </p>
 
-  <button>Clique aqui!</button>
+  <button id="btn">Clique aqui!</button>
   <br><br>
 
   <div id="div1" style="width:80px; height:80px; background-color: red;"></div>
@@ -48,10 +65,10 @@
 
   <hr>
 
-  <button id="mudarRed;">Vermelho</button><br /><br />
-  <button id="mudarGreen;">Verde</button><br /><br />
-  <button id="mudarBlue;">Azul</button><br /><br />
-  <button id="mudarYellow;">Amarelo</button><br /><br />
+  <button id="mudarRed">Vermelho</button><br /><br />
+  <button id="mudarGreen">Verde</button><br /><br />
+  <button id="mudarBlue">Azul</button><br /><br />
+  <button id="mudarYellow">Amarelo</button><br /><br />
 
 </body>
 

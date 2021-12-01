@@ -1,0 +1,16 @@
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\obj\Debug\net5.0\POO-UFN1.csproj.AssemblyReference.cache
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\obj\Debug\net5.0\POO-UFN1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\obj\Debug\net5.0\POO-UFN1.AssemblyInfoInputs.cache
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\obj\Debug\net5.0\POO-UFN1.AssemblyInfo.cs
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\obj\Debug\net5.0\POO-UFN1.csproj.CoreCompileInputs.cache
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\bin\Debug\net5.0\POO-UFN1.exe
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\bin\Debug\net5.0\POO-UFN1.deps.json
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\bin\Debug\net5.0\POO-UFN1.runtimeconfig.json
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\bin\Debug\net5.0\POO-UFN1.runtimeconfig.dev.json
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\bin\Debug\net5.0\POO-UFN1.dll
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\bin\Debug\net5.0\ref\POO-UFN1.dll
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\bin\Debug\net5.0\POO-UFN1.pdb
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\obj\Debug\net5.0\POO-UFN1.dll
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\obj\Debug\net5.0\ref\POO-UFN1.dll
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\obj\Debug\net5.0\POO-UFN1.pdb
+C:\Users\Cliente\source\repos\POO-UFN1\POO-UFN1\obj\Debug\net5.0\POO-UFN1.genruntimeconfig.cache
