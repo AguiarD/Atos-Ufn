@@ -38,5 +38,25 @@ namespace WinFormsAppADONet
             }
 
         }
+
+        private void btnConsultarId_Click(object sender, EventArgs e)
+        {
+            Programador programador = new Programador();
+            programador.consultaProgramador(int.Parse(textBox1.Text));
+            MessageBox.Show(programador.nome);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Banco bd = new Banco();
+
+            string sql = "select * from programadores";
+
+            DataTable dt = new DataTable();
+
+            dt = bd.executarConsultaGenerica(sql);
+
+            dataGridView1.DataSource = dt;
+        }
     }
 }

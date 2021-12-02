@@ -58,5 +58,114 @@ namespace WinFormsAppADONet
 
             return true;
         }
+
+        public bool excluirProgramador()
+        {
+            Banco bd = new Banco();
+
+            SqlConnection cn = bd.abrirConexao();
+            SqlTransaction tran = cn.BeginTransaction();
+            SqlCommand command = new SqlCommand();
+
+            command.Connection = cn;
+            command.Transaction = tran;
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "delete from Programadores where id = @id";
+            command.Parameters.Add("@id", System.Data.SqlDbType.Int);
+            command.Parameters[0].Value = id;
+
+            try
+            {
+                command.ExecuteNonQuery();
+                tran.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                tran.Rollback();
+                return false;
+            } 
+            finally
+            {
+                bd.fecharConexao();
+            }
+
+        }
+
+        public bool atualizarProgramador()
+        {
+            Banco bd = new Banco();
+
+            SqlConnection cn = bd.abrirConexao();
+            SqlTransaction tran = cn.BeginTransaction();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.Transaction = tran;
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "update Programadores set nome = @nome, linguagem = @linguagem, banco = @banco where id = @id";
+            cmd.Parameters.Add("@nome", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@linguagem", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@banco", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@id", System.Data.SqlDbType.Int);
+            cmd.Parameters[0].Value = nome;
+            cmd.Parameters[1].Value = linguagem;
+            cmd.Parameters[2].Value = banco;
+            cmd.Parameters[3].Value = id;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                tran.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                tran.Rollback();
+                return false;
+            }
+            finally
+            {
+                bd.fecharConexao();
+            }
+        }
+
+        public Programador consultaProgramador(int id)
+        {
+            Banco bd = new Banco();
+
+            try
+            {
+                SqlConnection cn = bd.abrirConexao();
+                SqlCommand command = new SqlCommand("select * from Programadores", cn);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if (reader.GetInt32(0) == id)
+                    {
+                        this.id = reader.GetInt32(0);
+                        nome = reader.GetString(1);
+                        linguagem = reader.GetString(2);
+                        banco = reader.GetString(3);
+
+                        return this;
+                    }
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+                
+            }
+            finally
+            {
+                bd.fecharConexao();
+            }
+        }
     }
 }

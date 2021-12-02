@@ -62,6 +62,7 @@ namespace WinFormsAppADONet
 
         public DataTable executarConsultaGenerica(string sql)
         {
+            //salva a o resultado da consulta na memoria
             try
             {
                 //conexao();
