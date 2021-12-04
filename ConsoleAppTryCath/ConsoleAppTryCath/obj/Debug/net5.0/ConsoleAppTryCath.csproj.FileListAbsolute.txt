@@ -1,0 +1,16 @@
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\bin\Debug\net5.0\ConsoleAppTryCath.exe
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\bin\Debug\net5.0\ConsoleAppTryCath.deps.json
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\bin\Debug\net5.0\ConsoleAppTryCath.runtimeconfig.json
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\bin\Debug\net5.0\ConsoleAppTryCath.runtimeconfig.dev.json
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\bin\Debug\net5.0\ConsoleAppTryCath.dll
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\bin\Debug\net5.0\ref\ConsoleAppTryCath.dll
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\bin\Debug\net5.0\ConsoleAppTryCath.pdb
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\obj\Debug\net5.0\ConsoleAppTryCath.csproj.AssemblyReference.cache
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\obj\Debug\net5.0\ConsoleAppTryCath.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\obj\Debug\net5.0\ConsoleAppTryCath.AssemblyInfoInputs.cache
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\obj\Debug\net5.0\ConsoleAppTryCath.AssemblyInfo.cs
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\obj\Debug\net5.0\ConsoleAppTryCath.csproj.CoreCompileInputs.cache
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\obj\Debug\net5.0\ConsoleAppTryCath.dll
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\obj\Debug\net5.0\ref\ConsoleAppTryCath.dll
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\obj\Debug\net5.0\ConsoleAppTryCath.pdb
+C:\Users\Cliente\source\repos\ConsoleAppTryCath\ConsoleAppTryCath\obj\Debug\net5.0\ConsoleAppTryCath.genruntimeconfig.cache

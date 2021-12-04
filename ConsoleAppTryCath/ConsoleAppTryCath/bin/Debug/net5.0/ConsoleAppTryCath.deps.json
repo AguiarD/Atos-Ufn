@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ConsoleAppTryCath/1.0.0": {
+        "runtime": {
+          "ConsoleAppTryCath.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleAppTryCath/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
