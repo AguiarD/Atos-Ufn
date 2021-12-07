@@ -37,6 +37,8 @@ namespace WinFormsAppADONet
                 MessageBox.Show("Erro ao gravar!");
             }
 
+            button2_Click(null, null);
+
         }
 
         private void btnConsultarId_Click(object sender, EventArgs e)
@@ -57,6 +59,70 @@ namespace WinFormsAppADONet
             dt = bd.executarConsultaGenerica(sql);
 
             dataGridView1.DataSource = dt;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Programador programador = new Programador();
+            programador.id = int.Parse(txbIdD.Text);
+
+            programador = programador.consultaProgramador(programador.id);
+
+            if (programador == null)
+            {
+                MessageBox.Show("Erro ao excluir: O programador não foi encontrado (404)!");
+                return;
+            }
+            
+            bool retorno = programador.excluirProgramador();
+
+            if (retorno == true)
+            {
+                MessageBox.Show("Excluido com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao executar a exlusão!");
+            }
+
+            button2_Click(null, null);
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Programador programador = new Programador();
+            programador.id = int.Parse(txbIdA.Text);
+            programador.nome = txbNomeA.Text;
+            programador.linguagem = txbLingA.Text;
+            programador.banco = txbBdA.Text;
+
+            bool retorno = programador.atualizarProgramador();
+
+            if (retorno)
+            {
+                MessageBox.Show("Alterado com sucesso!");
+                txbIdA.Text = "";
+                txbNomeA.Text = "";
+                txbLingA.Text = "";
+                txbBdA.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Erro ao alterar!");
+            }
+
+            button2_Click(null, null);
+        }
+
+        private void btnForm2_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -147,10 +147,10 @@ namespace WinFormsAppADONet
                 {
                     if (reader.GetInt32(0) == id)
                     {
-                        this.id = reader.GetInt32(0);
-                        nome = reader.GetString(1);
-                        linguagem = reader.GetString(2);
-                        banco = reader.GetString(3);
+                        this.id = reader.GetInt32(0); //GetInt por causa do ID, conforme a base de dados.
+                        nome = reader.GetString(1); //GetString por causa do nome, conforme a base de dados.
+                        linguagem = reader.GetString(2);  //GetString por causa da linguagem, conforme a base de dados.
+                        banco = reader.GetString(3);  //GetString por causa do banco, conforme a base de dados.
 
                         return this;
                     }
