@@ -1,0 +1,16 @@
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\bin\Debug\net5.0\ConsoleAppListasEDicionarios.exe
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\bin\Debug\net5.0\ConsoleAppListasEDicionarios.deps.json
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\bin\Debug\net5.0\ConsoleAppListasEDicionarios.runtimeconfig.json
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\bin\Debug\net5.0\ConsoleAppListasEDicionarios.runtimeconfig.dev.json
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\bin\Debug\net5.0\ConsoleAppListasEDicionarios.dll
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\bin\Debug\net5.0\ref\ConsoleAppListasEDicionarios.dll
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\bin\Debug\net5.0\ConsoleAppListasEDicionarios.pdb
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\obj\Debug\net5.0\ConsoleAppListasEDicionarios.csproj.AssemblyReference.cache
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\obj\Debug\net5.0\ConsoleAppListasEDicionarios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\obj\Debug\net5.0\ConsoleAppListasEDicionarios.AssemblyInfoInputs.cache
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\obj\Debug\net5.0\ConsoleAppListasEDicionarios.AssemblyInfo.cs
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\obj\Debug\net5.0\ConsoleAppListasEDicionarios.csproj.CoreCompileInputs.cache
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\obj\Debug\net5.0\ConsoleAppListasEDicionarios.dll
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\obj\Debug\net5.0\ref\ConsoleAppListasEDicionarios.dll
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\obj\Debug\net5.0\ConsoleAppListasEDicionarios.pdb
+C:\Users\Cliente\source\repos\ConsoleAppListasEDicionarios\ConsoleAppListasEDicionarios\obj\Debug\net5.0\ConsoleAppListasEDicionarios.genruntimeconfig.cache

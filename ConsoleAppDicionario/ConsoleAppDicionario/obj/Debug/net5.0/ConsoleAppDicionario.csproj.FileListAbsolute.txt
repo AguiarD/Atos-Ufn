@@ -1,0 +1,16 @@
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\bin\Debug\net5.0\ConsoleAppDicionario.exe
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\bin\Debug\net5.0\ConsoleAppDicionario.deps.json
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\bin\Debug\net5.0\ConsoleAppDicionario.runtimeconfig.json
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\bin\Debug\net5.0\ConsoleAppDicionario.runtimeconfig.dev.json
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\bin\Debug\net5.0\ConsoleAppDicionario.dll
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\bin\Debug\net5.0\ref\ConsoleAppDicionario.dll
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\bin\Debug\net5.0\ConsoleAppDicionario.pdb
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\obj\Debug\net5.0\ConsoleAppDicionario.csproj.AssemblyReference.cache
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\obj\Debug\net5.0\ConsoleAppDicionario.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\obj\Debug\net5.0\ConsoleAppDicionario.AssemblyInfoInputs.cache
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\obj\Debug\net5.0\ConsoleAppDicionario.AssemblyInfo.cs
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\obj\Debug\net5.0\ConsoleAppDicionario.csproj.CoreCompileInputs.cache
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\obj\Debug\net5.0\ConsoleAppDicionario.dll
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\obj\Debug\net5.0\ref\ConsoleAppDicionario.dll
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\obj\Debug\net5.0\ConsoleAppDicionario.pdb
+C:\Users\Cliente\source\repos\ConsoleAppDicionario\ConsoleAppDicionario\obj\Debug\net5.0\ConsoleAppDicionario.genruntimeconfig.cache

@@ -8,8 +8,10 @@ namespace POO_UFN1
 {
     class Disciplina
     {
-        private string nome;
-        private int carga;
+        public Disciplina() { }
+
+        public string nome;
+        public int carga;
 
         public Disciplina(string nome, int ch)
         {

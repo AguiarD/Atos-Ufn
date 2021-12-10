@@ -10,8 +10,8 @@ namespace ConsoleAppDesafio
             
             a.lerArquivo();
 
-            Aluno aluno = new Aluno("123", "3456", "678");           
-            Console.WriteLine("Nome: " + aluno.nomeCurso + " - " + aluno.matricula);
+            /*Aluno aluno = new Aluno("123", "3456", "678");           
+            Console.WriteLine("Nome: " + aluno.nomeCurso + " - " + aluno.matricula);*/
 
         }
     }

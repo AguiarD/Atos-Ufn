@@ -13,27 +13,33 @@ namespace ConsoleAppDesafio
         
         public void lerArquivo()
         {
-            string linha, tipo;
+            string linha;
+            string[] pessoas;
             sr = new StreamReader("C:\\Users\\Cliente\\Pictures\\teste\\desafio1.txt");
             linha = sr.ReadLine();
             while (linha != null)
             {
                 linha = sr.ReadLine();
-                //Console.WriteLine(linha);
 
-                //tipo = linha.Substring(0, 2);
-                //if (tipo == "Z")
-                //{
-                    string[] pessoas = linha.Split('-');
+                pessoas = linha.Split('-');
 
-                    foreach (var pessoa in pessoas)
-                    {
-                        if (pessoas[0] == "Z")
-                        {
-                            Console.WriteLine(pessoas[1]);
-                        }
-                    }
-                        Console.WriteLine();
+                if (pessoas[0] == "Z")
+                {
+                    Console.WriteLine(pessoas[0]);
+                    Console.WriteLine(pessoas[1]);
+                    Console.WriteLine(pessoas[2]);
+                    Console.WriteLine(pessoas[3]);
+                    Console.WriteLine(pessoas[4]);
+                    Console.WriteLine(pessoas[5]);
+                }
+                else if (pessoas[0] == "Y")
+                {
+                    Console.WriteLine(pessoas[0]);
+                    Console.WriteLine(pessoas[1]);
+                    Console.WriteLine(pessoas[2]);
+                    Console.WriteLine(pessoas[3]);
+                }
+                    Console.WriteLine();
                 //}
             }
             sr.Close();
