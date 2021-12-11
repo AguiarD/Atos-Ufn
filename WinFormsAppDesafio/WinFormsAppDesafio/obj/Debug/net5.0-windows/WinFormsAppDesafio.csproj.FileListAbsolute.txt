@@ -18,7 +18,6 @@ C:\Users\Cliente\source\repos\WinFormsAppDesafio\WinFormsAppDesafio\obj\Debug\ne
 C:\Users\Cliente\source\repos\WinFormsAppDesafio\WinFormsAppDesafio\obj\Debug\net5.0-windows\WinFormsAppDesafio.AssemblyInfoInputs.cache
 C:\Users\Cliente\source\repos\WinFormsAppDesafio\WinFormsAppDesafio\obj\Debug\net5.0-windows\WinFormsAppDesafio.AssemblyInfo.cs
 C:\Users\Cliente\source\repos\WinFormsAppDesafio\WinFormsAppDesafio\obj\Debug\net5.0-windows\WinFormsAppDesafio.csproj.CoreCompileInputs.cache
-C:\Users\Cliente\source\repos\WinFormsAppDesafio\WinFormsAppDesafio\obj\Debug\net5.0-windows\WinFormsAppDesafio.csproj.CopyComplete
 C:\Users\Cliente\source\repos\WinFormsAppDesafio\WinFormsAppDesafio\obj\Debug\net5.0-windows\WinFormsAppDesafio.dll
 C:\Users\Cliente\source\repos\WinFormsAppDesafio\WinFormsAppDesafio\obj\Debug\net5.0-windows\ref\WinFormsAppDesafio.dll
 C:\Users\Cliente\source\repos\WinFormsAppDesafio\WinFormsAppDesafio\obj\Debug\net5.0-windows\WinFormsAppDesafio.pdb

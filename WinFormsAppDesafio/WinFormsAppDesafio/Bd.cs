@@ -10,7 +10,7 @@ namespace WinFormsAppDesafio
 {
     class Bd
     {
-        private string stringConexao = @"Data Source=localhost\MSSQLSERVER01; Initial Catalog=ADONet; User ID=usuario; password=senha; language=Portuguese";
+        private string stringConexao = @"Data Source=localhost\MSSQLSERVER01; Initial Catalog=DESAFIOS; User ID=sa; password=1234; language=Portuguese";
 
         private SqlConnection cn;
 

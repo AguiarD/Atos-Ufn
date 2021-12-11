@@ -13,17 +13,18 @@ namespace WinFormsAppDesafio
         public string cdCurso { get; set; }
         public string nomeCurso { get; set; }
 
-        public Aluno(int pessoa, string matricula, string cdCurso, string nomeCurso)
+        /*public Aluno(int pessoa, string matricula, string cdCurso, string nomeCurso)
         {
-            /*nome = "Nome teste";
-            telefone = "Telefone Teste";
-            cidade = "Cidade Teste";
-            rg = "Rg teste";
-            cpf = "Cpf teste";*/
+            //nome = "Nome teste";
+            //tel = "Telefone Teste";
+            //cidade = "Cidade Teste";
+            //rg = "Rg teste";
+            //cpf = "Cpf teste";
             this.pessoa = pessoa;
             this.matricula = matricula;
             this.cdCurso = cdCurso;
             this.nomeCurso = nomeCurso;
-        }
+        }*/
+
     }
 }
