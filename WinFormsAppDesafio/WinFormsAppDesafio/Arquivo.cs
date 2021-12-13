@@ -30,7 +30,7 @@ namespace WinFormsAppDesafio
 
                     if (pessoas[0] == "Z")
                     {
-                        Pessoa a = new Pessoa();
+                        //Pessoa a = new Pessoa();
                         a.nome = pessoas[1];
                         a.tel = pessoas[2];
                         a.cidade = pessoas[3];

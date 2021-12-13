@@ -28,7 +28,17 @@ namespace WinFormsAppDesafio
         private void btnImportar_Click(object sender, EventArgs e)
         {
             Pessoa pessoa = new Pessoa();
-            pessoa.gravarPessoa();
+            bool retorno = pessoa.gravarPessoa();
+
+            if (pessoa.gravarPessoa())
+            {
+                MessageBox.Show("Gravado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Erro!");
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
