@@ -44,8 +44,24 @@ namespace WinFormsAppDesafio1
             dataGListar.DataSource = dt;
         }
 
+
         StreamReader sr;
         public int contP = 0, contA = 0;
+
+        private void btnContAluno_Click(object sender, EventArgs e)
+        {
+            Alunos alunos = new Alunos();
+            contA = alunos.contarAlunos();
+            MessageBox.Show(contA + " Alunos!");
+        }
+
+        private void btnContPessoas_Click(object sender, EventArgs e)
+        {
+            Pessoas pessoas = new Pessoas();
+            contP = pessoas.contarPessoas();
+            MessageBox.Show(contP + " Pessoas!");
+        }
+
         private void btnImportar_Click(object sender, EventArgs e)
         {
 
@@ -54,7 +70,7 @@ namespace WinFormsAppDesafio1
             sr = new StreamReader("C:\\Users\\Cliente\\Pictures\\teste\\desafio1.txt");
             while (sr.Peek() > 0)
             {
-            string linha = sr.ReadLine();
+                string linha = sr.ReadLine();
                 //linha = sr.ReadLine();
 
                 try
@@ -70,13 +86,6 @@ namespace WinFormsAppDesafio1
                         string cidade = pessoas[3];
                         string rg = pessoas[4];
                         string cpf = pessoas[5];
-                        /*Console.WriteLine(pessoas[0]);
-                        Console.WriteLine(pessoas[1]);
-                        Console.WriteLine(pessoas[2]);
-                        Console.WriteLine(pessoas[3]);
-                        Console.WriteLine(pessoas[4]);
-                        Console.WriteLine(pessoas[5]);*/
-                        //a.gravarPessoa();
                         contP++;
 
                         Pessoas pessoa = new Pessoas();
@@ -87,15 +96,23 @@ namespace WinFormsAppDesafio1
                         pessoa.cpf = cpf;
 
                         pessoa.importarArquivo();
+                        //MessageBox.Show("Pessoas importadas com sucesso!");
                     }
                     else if (pessoas[0] == "Y")
                     {
 
+                        string matricula = pessoas[1];
+                        string codCurso = pessoas[2];
+                        string nomeCurso = pessoas[3];
+                        contA++;
 
-                        /*Console.WriteLine(pessoas[0]);
-                        Console.WriteLine(pessoas[1]);
-                        Console.WriteLine(pessoas[2]);
-                        Console.WriteLine(pessoas[3]);*/
+                        Alunos aluno = new Alunos();
+                        aluno.matricula = matricula;
+                        aluno.codigo_curso = codCurso;
+                        aluno.nome_curso = nomeCurso;
+
+                        aluno.importarArqAluno();
+                        //MessageBox.Show("Alunos importados com sucesso!");
                     }
                     Console.WriteLine();
                     //}
@@ -106,6 +123,7 @@ namespace WinFormsAppDesafio1
                     sr.Close();
                 }
             }
+                    MessageBox.Show("Importado com sucesso!");
 
         }
     }

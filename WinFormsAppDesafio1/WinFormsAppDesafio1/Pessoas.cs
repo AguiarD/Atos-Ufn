@@ -20,7 +20,6 @@ namespace WinFormsAppDesafio1
 
         StreamReader sr;
         public int contP = 0, contA = 0;
-        //Pessoa a = new Pessoa();
 
 
         public void lerArquivo()
@@ -81,14 +80,13 @@ namespace WinFormsAppDesafio1
             Bd banco = new Bd();
 
             SqlConnection cn = banco.abrirConexao();
-            SqlTransaction tran = cn.BeginTransaction(); //Tem que ter o transaction para ter o rollback
+            SqlTransaction tran = cn.BeginTransaction();
             SqlCommand command = new SqlCommand();
 
             command.Connection = cn;
             command.Transaction = tran;
-            command.CommandType = System.Data.CommandType.Text; //dizer que o comando é do tipo texo
+            command.CommandType = System.Data.CommandType.Text;
 
-            //command.CommandText = "insert into Programadores values ('" + nome + "', '" + linguagem + "', '" + this.banco + "');"; //Modo errado - sql injection
             command.CommandText = "insert into Pessoas values (@nome, @telefone, @cidade, @rg, @cpf);";
             command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar);
             command.Parameters.Add("@telefone", System.Data.SqlDbType.VarChar);
@@ -118,12 +116,37 @@ namespace WinFormsAppDesafio1
             {
                 banco.fecharConexao();
             }
+        }
 
+        public int contarPessoas()
+        {
+            Bd banco = new Bd();
 
+            SqlConnection cn = banco.abrirConexao();
+            SqlTransaction tran = cn.BeginTransaction();
+            SqlCommand command = new SqlCommand();
 
+            command.Connection = cn;
+            command.Transaction = tran;
+            command.CommandType = System.Data.CommandType.Text;
 
+            command.CommandText = "select count(*) from PESSOAS;";
 
-            //return true;
+            try
+            {
+                int contador = (int)command.ExecuteScalar();
+                return contador;
+            }
+            catch (Exception ex)
+            {
+
+                tran.Rollback();
+                return 0;
+            }
+            finally
+            {
+                banco.fecharConexao();
+            }
         }
     }
 }

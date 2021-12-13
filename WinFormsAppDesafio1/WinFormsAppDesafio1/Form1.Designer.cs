@@ -30,27 +30,50 @@ namespace WinFormsAppDesafio1
         private void InitializeComponent()
         {
             this.gBDesafio1 = new System.Windows.Forms.GroupBox();
+            this.btnContPessoas = new System.Windows.Forms.Button();
+            this.btnContAluno = new System.Windows.Forms.Button();
             this.btnImportar = new System.Windows.Forms.Button();
             this.btnAluno = new System.Windows.Forms.Button();
             this.btnPessoa = new System.Windows.Forms.Button();
             this.dataGListar = new System.Windows.Forms.DataGridView();
-            this.txbTeste = new System.Windows.Forms.TextBox();
             this.gBDesafio1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGListar)).BeginInit();
             this.SuspendLayout();
             // 
             // gBDesafio1
             // 
+            this.gBDesafio1.Controls.Add(this.btnContPessoas);
+            this.gBDesafio1.Controls.Add(this.btnContAluno);
             this.gBDesafio1.Controls.Add(this.btnImportar);
             this.gBDesafio1.Controls.Add(this.btnAluno);
             this.gBDesafio1.Controls.Add(this.btnPessoa);
             this.gBDesafio1.Controls.Add(this.dataGListar);
             this.gBDesafio1.Location = new System.Drawing.Point(12, 12);
             this.gBDesafio1.Name = "gBDesafio1";
-            this.gBDesafio1.Size = new System.Drawing.Size(578, 359);
+            this.gBDesafio1.Size = new System.Drawing.Size(649, 361);
             this.gBDesafio1.TabIndex = 0;
             this.gBDesafio1.TabStop = false;
             this.gBDesafio1.Text = "Desafio1";
+            // 
+            // btnContPessoas
+            // 
+            this.btnContPessoas.Location = new System.Drawing.Point(18, 277);
+            this.btnContPessoas.Name = "btnContPessoas";
+            this.btnContPessoas.Size = new System.Drawing.Size(75, 23);
+            this.btnContPessoas.TabIndex = 5;
+            this.btnContPessoas.Text = "C. Pessoas";
+            this.btnContPessoas.UseVisualStyleBackColor = true;
+            this.btnContPessoas.Click += new System.EventHandler(this.btnContPessoas_Click);
+            // 
+            // btnContAluno
+            // 
+            this.btnContAluno.Location = new System.Drawing.Point(18, 311);
+            this.btnContAluno.Name = "btnContAluno";
+            this.btnContAluno.Size = new System.Drawing.Size(75, 23);
+            this.btnContAluno.TabIndex = 4;
+            this.btnContAluno.Text = "C. Aluno";
+            this.btnContAluno.UseVisualStyleBackColor = true;
+            this.btnContAluno.Click += new System.EventHandler(this.btnContAluno_Click);
             // 
             // btnImportar
             // 
@@ -91,30 +114,20 @@ namespace WinFormsAppDesafio1
             this.dataGListar.Name = "dataGListar";
             this.dataGListar.ReadOnly = true;
             this.dataGListar.RowTemplate.Height = 25;
-            this.dataGListar.Size = new System.Drawing.Size(452, 302);
+            this.dataGListar.Size = new System.Drawing.Size(521, 302);
             this.dataGListar.TabIndex = 0;
-            // 
-            // txbTeste
-            // 
-            this.txbTeste.Location = new System.Drawing.Point(606, 44);
-            this.txbTeste.Multiline = true;
-            this.txbTeste.Name = "txbTeste";
-            this.txbTeste.Size = new System.Drawing.Size(173, 302);
-            this.txbTeste.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txbTeste);
             this.Controls.Add(this.gBDesafio1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.gBDesafio1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGListar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -125,7 +138,8 @@ namespace WinFormsAppDesafio1
         private System.Windows.Forms.DataGridView dataGListar;
         private System.Windows.Forms.Button btnAluno;
         private System.Windows.Forms.Button btnImportar;
-        private System.Windows.Forms.TextBox txbTeste;
+        private System.Windows.Forms.Button btnContAluno;
+        private System.Windows.Forms.Button btnContPessoas;
     }
 }
 
