@@ -108,7 +108,7 @@ namespace WinFormsAppRemedios
 
                     if(h == data_hora.Hour && m == data_hora.Minute && s == data_hora.Second)
                     {
-                        MessageBox.Show("Remedio " + reader.GetString(1));
+                        MessageBox.Show("Hora de tomar o Remedio " + reader.GetString(1));
                         //break;
                     }
                     
