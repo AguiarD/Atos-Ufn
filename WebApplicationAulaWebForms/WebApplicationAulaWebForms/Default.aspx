@@ -13,17 +13,39 @@
         {
             $.ajax({
                 type: "POST",
-                url: "Default.aspx/alerta1",
+                url: "Default.aspx/alerta1", //rota, dizendo onde está o recurso que queremos utilizar
                 data: "{}",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
-                success: function (data) {
+                success: function (data)/*data = palavra reservada, para receber o retorno da classe*/ {
                     //faz algo, caso tudo tenha dado certo
+                    alert(data.d);
                 },
                 error: function () {
                     //faz algo, porque deu erro
+                    alert("Falha ao acessar o webservice!"); ss
                 }
-            })
+            });
+        }
+
+        function ajax2() {
+            //var x = document.getElementById('textBox').value;
+
+            $.ajax({
+                type: "POST",
+                url: "Default.aspx/alerta2",
+                data: "{ valor: " + document.getElementById('textBox').value + "}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    document.getElementById("label").innerHTML = data.d;
+                    //alert(data.d);
+                },
+                error: function () {
+                    document.getElementById("label").innerHTML = "Erro!";
+                    //alert("Erro!");
+                }
+            });
         }
 
     </script>
@@ -31,13 +53,26 @@
 <body style="background-color:lightgreen">
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="lblNome" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="label" runat="server" Text="Label"></asp:Label>
             <br />
             <br />
-            <asp:TextBox ID="txbNome" runat="server"></asp:TextBox>
+            <asp:TextBox ID="textBox" runat="server"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Clique aqui" OnClick="Button1_Click" />
+
+            <input id="btnAjax1" type="button" value="Ajax 1" onclick="ajax1();" />
+            <br />
+            <br />
+
+            <input id="btnAjax2" type="button" value="Ajax 2 - Dobro do valor" onclick="ajax2();" />
+            <br />
+            <br />
+
+            
+            <asp:Panel ID="Panel1" runat="server">
+                <asp:Button ID="Button1" runat="server" Text="Clique aqui" OnClick="Button1_Click" />
+                <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+            </asp:Panel>
             <br />
             <br />
 
