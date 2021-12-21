@@ -37,6 +37,7 @@ namespace WinFormsAppCriptografiaELogin
             command.Parameters[2].Value = senha;
             command.Parameters[3].Value = tp_senha;
 
+            //lembrar de validar se o email que estamos tentando inserir, ja existe no banco de dados - podemos usar o ExecuteScalar() para retornar um registro
             try
             {
                 command.ExecuteNonQuery();
