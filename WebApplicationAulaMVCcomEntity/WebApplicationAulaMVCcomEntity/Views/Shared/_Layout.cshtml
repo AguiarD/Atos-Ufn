@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <header>
+            <a href="/">Home</a>
+            <a href="@Url.Action("Cadastrar","Home")">Cadastrar</a>
+            <a href="@Url.Action("Pessoas","Home")">Pessoas</a>
+            <a href="@Url.Action("Sobre","Home")">Sobre mim</a>
+            <hr />
+
+        </header>
+
+        @RenderBody() <!--Para reutilizar a view em todo o projeto-->
+
+        <footer>
+            <hr />
+            Atos UFN .NET 2021-2
+        </footer>
+    </body>
+</html>

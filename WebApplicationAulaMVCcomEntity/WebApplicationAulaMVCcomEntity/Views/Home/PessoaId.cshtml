@@ -1,0 +1,13 @@
+﻿@model WebApplicationAulaMVCcomEntity.Models.Pessoa
+
+@{
+}
+
+<h3>Nome da pessoa é @Model.Nome</h3>
+<br />
+
+@foreach (var email in @Model.Emails)
+{
+    @email.email
+}
+

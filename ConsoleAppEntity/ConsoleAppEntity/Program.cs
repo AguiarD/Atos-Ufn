@@ -11,7 +11,8 @@ namespace ConsoleAppEntity
         static void Main(string[] args)
         {
             Console.WriteLine(
-                @"Informe 1 para criar uma pessoa,
+                @"Informe a opção:
+                1 para criar uma pessoa,
                 2 para alterar o nome,
                 3 para inserir um email,
                 4 para excluir a pessoa,
@@ -58,6 +59,51 @@ namespace ConsoleAppEntity
                     pAlt.Nome = Console.ReadLine();
                     contexto.Pessoas.Update(pAlt);
                     contexto.SaveChanges();
+                    break;
+
+                case 3:
+                    Console.WriteLine("Informe o ID da pessoa: ");
+                    int idPess = int.Parse(Console.ReadLine());
+                    Pessoa pess = contexto.Pessoas.Find(idPess);
+
+                    Console.WriteLine("Insira o novo email: ");
+                    Email emailNovo = new Email();
+                    emailNovo.email = Console.ReadLine();
+
+                    if (pess.Emails == null)
+                    {
+                        pess.Emails = new List<Email>();
+                    }
+
+                    pess.Emails.Add(emailNovo);
+
+                    contexto.Pessoas.Update(pess);
+                    contexto.SaveChanges();
+
+                    break;
+
+                case 4:
+                    Console.WriteLine("Informe o ID da pessoa: ");
+                    int idExc = int.Parse(Console.ReadLine());
+                    Pessoa pExc = contexto.Pessoas.Find(idExc);
+
+                    Console.WriteLine("Confirma a exclusão de " + pExc.Nome);
+                    Console.WriteLine(" e dos seus emails: ");
+
+                    foreach (Email item in pExc.Emails)
+                    {
+                        Console.WriteLine("   " + item.email);
+                    }
+
+                    Console.WriteLine("1 -> SIM ----- 2 -> NAO");
+                    int retorno = int.Parse(Console.ReadLine());
+
+                    if (retorno == 1)
+                    {
+                        contexto.Pessoas.Remove(pExc);
+                        contexto.SaveChanges();
+                    }
+
                     break;
 
                 case 5:

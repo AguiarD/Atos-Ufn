@@ -11,7 +11,7 @@ namespace ConsoleAppEntity.Models
         public int id { get; set; }
         public string Nome { get; set; }
 
-        public ICollection<Email> Emails { get; set; } //criando um vículo dizendo que essa pessoa possui vários emails.
+        public virtual ICollection<Email> Emails { get; set; } //criando um vículo dizendo que essa pessoa possui vários emails.
                                                        //É para entender que email pode ter uma pessoa, e uma pessoa pode
                                                        //ter varios emails
     }
