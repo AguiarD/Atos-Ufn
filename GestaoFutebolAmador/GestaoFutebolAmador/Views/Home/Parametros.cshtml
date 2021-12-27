@@ -5,8 +5,26 @@
 @{
 }
 
-@foreach (var parametro in @Model)
-{
-    <strong>@parametro.desc_parametro</strong>
-    <br />
-}
+<table class="table table-sm table-striped table-hover table-responsive-md text-center">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Parametro</th>
+            <th>Pontos</th>
+            <th>Editar</th>
+            <th>Deletar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var parametro in @Model)
+        {
+            <tr>
+                <td>@parametro.id</td>
+                <td>@parametro.desc_parametro</td>
+                <td>@parametro.ponto</td>
+                <td><a href="#">Editar</a></td>
+                <td><a href="#">Editar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

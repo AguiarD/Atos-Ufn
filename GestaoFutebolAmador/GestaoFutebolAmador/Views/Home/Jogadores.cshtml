@@ -5,8 +5,29 @@
 }
 
 
-@foreach (var jogador in @Model)
-{
-    <strong>@jogador.nome_jogador</strong>
-    <br />
-}
+<table class="table table-sm table-striped table-hover table-responsive-md text-center">
+    <thead>
+        <tr>
+            <th>Jogador</th>
+            <th>Mensalista</th>
+            <th>Observacao</th>
+            <th>Editar</th>
+            <th>Deletar</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var jogador in @Model)
+        {
+                <tr>
+                    <td>@jogador.nome_jogador</td>
+                    <td>@jogador.mensalista</td>
+                    <td>@jogador.obs_mensalista</td>
+                    <td><a href="#">Editar</a></td>
+                    <td><a href="#">Deletar</a></td>
+                </tr>
+                @*<strong>@jogador.nome_jogador</strong>
+                <br />*@
+        }
+    </tbody>
+</table>

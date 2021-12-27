@@ -75,3 +75,4 @@ C:\Users\Cliente\source\repos\GestaoFutebolAmador\GestaoFutebolAmador\obj\Debug\
 C:\Users\Cliente\source\repos\GestaoFutebolAmador\GestaoFutebolAmador\obj\Debug\net5.0\Razor\Views\Home\Jogadores.cshtml.g.cs
 C:\Users\Cliente\source\repos\GestaoFutebolAmador\GestaoFutebolAmador\obj\Debug\net5.0\Razor\Views\Home\Contas.cshtml.g.cs
 C:\Users\Cliente\source\repos\GestaoFutebolAmador\GestaoFutebolAmador\obj\Debug\net5.0\Razor\Views\Home\Parametros.cshtml.g.cs
+C:\Users\Cliente\source\repos\GestaoFutebolAmador\GestaoFutebolAmador\obj\Debug\net5.0\Razor\Views\Home\Financeiros.cshtml.g.cs

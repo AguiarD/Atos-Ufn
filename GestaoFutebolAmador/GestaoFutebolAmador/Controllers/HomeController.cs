@@ -50,6 +50,21 @@ namespace GestaoFutebolAmador.Controllers
             return View(contas);
         }
 
+        public IActionResult Financeiros()
+        {
+            Contexto contexto = new Contexto();
+
+            List<Financeiro> financeiros = (from Financeiro f in contexto.Financeiros select f).ToList<Financeiro>();
+
+            return View(financeiros);
+        }
+
+        //public IActionResult LancamentosAno(int ano)
+        //{
+        //    Contexto contexto = new Contexto();
+
+        //}
+
         public IActionResult Privacy()
         {
             return View();

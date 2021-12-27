@@ -5,9 +5,26 @@
 @{
 }
 
-
-@foreach (var conta in @Model)
-{
-    <strong>@conta.desc_conta</strong>
-    <br />
-}
+<table class="table table-sm table-striped table-hover table-responsive-md text-center">
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>Conta</th>
+            <th>Observacao</th>
+            <th>Editar</th>
+            <th>Deletar</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var conta in @Model)
+            {
+                <tr>
+                    <td>@conta.desc_conta</td>
+                    <td>@conta.tipo_conta</td>
+                    <td>@conta.obs_conta</td>
+                    <td><a href="#">Editar</a></td>
+                    <td><a href="#">Deletar</a></td>
+                </tr>   
+            }
+    </tbody>
+</table>
