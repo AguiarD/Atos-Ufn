@@ -1,0 +1,58 @@
+﻿@model IEnumerable<GFA.Models.Scout>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@using (Html.BeginForm("Tabela", "Scouts", FormMethod.Post))
+{
+
+    <form asp-action="Inserir">
+        <div>
+            <label>Data Partida</label>
+            <input type="date" name="formDt_partida" placeholder="Data" required />
+            <br />
+            <br />
+
+            <label>Jogador</label>
+            <select id="jogadorA1">
+                @foreach (var scout in @Model)
+                {
+                    <option>@scout.fk_jogador.nome_jogador</option>
+                }
+            </select>
+
+            <label>Presenca</label>
+            <input type="number" name="formPresenca" placeholder="Presença" required />
+
+            <label>Parametro</label>
+            <select id="parametroA1">
+                @foreach (var parametro in @Model)
+                {
+                    <option>@parametro.fk_parametro.desc_parametro</option>
+                }
+            </select>
+
+            <label>Resultado</label>
+            <input type="text" name="formResultado" placeholder="Resultado" required />
+
+            <label>Ponto</label>
+            <input type="number" name="formPonto" placeholder="Ponto" required />
+
+            <label>Gol</label>
+            <input type="number" name="formGol" placeholder="Gol" required />
+
+            <label>Assistencia</label>
+            <input type="number" name="formAssistencia" placeholder="Assistencia" required />
+
+            <label>Observacao</label>
+            <input type="text" name="formObservacao" placeholder="Observacao" required />
+
+            <label>Inativo</label>
+            <input type="date" name="formInativo" placeholder="Inativo" required />
+
+            <input type="submit" name="formSubmit" value="Cadastrar" />
+        </div>
+    </form>
+}

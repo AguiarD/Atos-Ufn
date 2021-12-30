@@ -18,7 +18,6 @@ C:\Users\Cliente\source\repos\WebApplicationAulaMVCcomEntity\WebApplicationAulaM
 C:\Users\Cliente\source\repos\WebApplicationAulaMVCcomEntity\WebApplicationAulaMVCcomEntity\obj\Debug\net5.0\WebApplicationAulaMVCcomEntity.RazorAssemblyInfo.cache
 C:\Users\Cliente\source\repos\WebApplicationAulaMVCcomEntity\WebApplicationAulaMVCcomEntity\obj\Debug\net5.0\WebApplicationAulaMVCcomEntity.RazorAssemblyInfo.cs
 C:\Users\Cliente\source\repos\WebApplicationAulaMVCcomEntity\WebApplicationAulaMVCcomEntity\obj\Debug\net5.0\staticwebassets\WebApplicationAulaMVCcomEntity.StaticWebAssets.Manifest.cache
-C:\Users\Cliente\source\repos\WebApplicationAulaMVCcomEntity\WebApplicationAulaMVCcomEntity\obj\Debug\net5.0\staticwebassets\WebApplicationAulaMVCcomEntity.StaticWebAssets.xml
 C:\Users\Cliente\source\repos\WebApplicationAulaMVCcomEntity\WebApplicationAulaMVCcomEntity\obj\Debug\net5.0\scopedcss\bundle\WebApplicationAulaMVCcomEntity.styles.css
 C:\Users\Cliente\source\repos\WebApplicationAulaMVCcomEntity\WebApplicationAulaMVCcomEntity\obj\Debug\net5.0\WebApplicationAulaMVCcomEntity.TagHelpers.input.cache
 C:\Users\Cliente\source\repos\WebApplicationAulaMVCcomEntity\WebApplicationAulaMVCcomEntity\obj\Debug\net5.0\WebApplicationAulaMVCcomEntity.TagHelpers.output.cache

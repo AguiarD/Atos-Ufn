@@ -1,0 +1,69 @@
+﻿@model GFA.Models.Scout
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Scout</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="dt_partida" class="control-label"></label>
+                <input asp-for="dt_partida" class="form-control" />
+                <span asp-validation-for="dt_partida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="presenca" class="control-label"></label>
+                <input asp-for="presenca" class="form-control" />
+                <span asp-validation-for="presenca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resultado" class="control-label"></label>
+                <input asp-for="resultado" class="form-control" />
+                <span asp-validation-for="resultado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ponto" class="control-label"></label>
+                <input asp-for="ponto" class="form-control" />
+                <span asp-validation-for="ponto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gol" class="control-label"></label>
+                <input asp-for="gol" class="form-control" />
+                <span asp-validation-for="gol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="assistencia" class="control-label"></label>
+                <input asp-for="assistencia" class="form-control" />
+                <span asp-validation-for="assistencia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="obs_scout" class="control-label"></label>
+                <input asp-for="obs_scout" class="form-control" />
+                <span asp-validation-for="obs_scout" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="inativo" class="control-label"></label>
+                <input asp-for="inativo" class="form-control" />
+                <span asp-validation-for="inativo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

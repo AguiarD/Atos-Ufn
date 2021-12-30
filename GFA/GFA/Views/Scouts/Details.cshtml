@@ -1,0 +1,66 @@
+﻿@model GFA.Models.Scout
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Scout</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dt_partida)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dt_partida)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.presenca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.presenca)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.resultado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.resultado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ponto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ponto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.gol)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.gol)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.assistencia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.assistencia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.obs_scout)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.obs_scout)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.inativo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.inativo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

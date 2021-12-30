@@ -74,13 +74,15 @@ namespace GestaoFutebolAmador.Migrations
                         column: x => x.fk_contaid,
                         principalTable: "Contas",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
+                        onUpdate: ReferentialAction.Cascade,
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Financeiros_Jogadores_fk_jogadorid",
                         column: x => x.fk_jogadorid,
                         principalTable: "Jogadores",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
+                        onUpdate: ReferentialAction.Cascade,
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
