@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DQbDRIFtar3VYtZStVpE5b69JOAGEBqrwosbupdIYdVRWH6wduhRKQWqGI2lY5hr6ulXdEmdXUIkg3t+KjDkfQ==",
+  "dgSpecHash": "gu6PufS8+1rSNuCLyAi4UIB/ihAwBw31bkhaqHM9gySpX55aV9oeldpEf8SrnoSUieBbHnAndc9Aa16E5Pi5HA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Cliente\\source\\repos\\WinFormsAppADONet\\WinFormsAppADONet\\WinFormsAppADONet.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Cliente\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
     "C:\\Users\\Cliente\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\Cliente\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\Cliente\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\Cliente\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
   ],
   "logs": []
 }

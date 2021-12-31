@@ -7,147 +7,95 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GestaoFinanceira;
 using GestaoFinanceira.Models;
+using GestaoFinanceira.Repository;
 
 namespace GestaoFinanceira.Controllers
 {
     public class LancamentosController : Controller
     {
-        private readonly Contexto _context;
-
-        public LancamentosController(Contexto context)
+        // GET: Funcionario/SelecionarFuncionarios
+        public ActionResult SelecionarLancamentos()
         {
-            _context = context;
+            var funcRepository = new LancamentoRepository();
+            ModelState.Clear();
+
+            return View(funcRepository.SelecionarLancamentos());
         }
 
-        // GET: Lancamentos
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Lancamentos.ToListAsync());
-        }
-
-        // GET: Lancamentos/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var lancamento = await _context.Lancamentos
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (lancamento == null)
-            {
-                return NotFound();
-            }
-
-            return View(lancamento);
-        }
-
-        // GET: Lancamentos/Create
-        public IActionResult Create()
+        // GET: Funcionario/AdicionarFuncionario
+        public ActionResult AdicionarLancamento()
         {
             return View();
         }
 
-        // POST: Lancamentos/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Funcionario/AdicionarFuncionario
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,tipo,valor,grupo,conta,obs,dt_previsao,dt_baixa,inativo")] Lancamento lancamento)
+        public ActionResult AdicionarLancamento(Lancamento func)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(lancamento);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(lancamento);
-        }
-
-        // GET: Lancamentos/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var lancamento = await _context.Lancamentos.FindAsync(id);
-            if (lancamento == null)
-            {
-                return NotFound();
-            }
-            return View(lancamento);
-        }
-
-        // POST: Lancamentos/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,tipo,valor,grupo,conta,obs,dt_previsao,dt_baixa,inativo")] Lancamento lancamento)
-        {
-            if (id != lancamento.id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
+                if (ModelState.IsValid)
                 {
-                    _context.Update(lancamento);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!LancamentoExists(lancamento.id))
+                    var lancRepository = new LancamentoRepository();
+
+                    if (lancRepository.AdicionarLancamento(func))
                     {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
+                        ViewBag.Message = "Lancamento criado com sucesso!";
                     }
                 }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(lancamento);
-        }
 
-        // GET: Lancamentos/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
+                return View();
+            }
+            catch
             {
-                return NotFound();
+                return View();
             }
+        }
 
-            var lancamento = await _context.Lancamentos
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (lancamento == null)
+        // GET: Funcionario/AtualizarFuncionario/5
+        public ActionResult AtualizarLancamento(int id)
+        {
+            var lancRepository = new LancamentoRepository();
+
+            return View(lancRepository.SelecionarLancamentos()
+                            .Find(lanc => lanc.id == id));
+        }
+
+        // POST: Funcionario/Edit/5
+        [HttpPost]
+        public ActionResult AtualizarLancamento(int id, Lancamento lancamento)
+        {
+            try
             {
-                return NotFound();
+                var lancRepository = new LancamentoRepository();
+                lancRepository.AtualizarLancamento(lancamento);
+
+                return RedirectToAction("SelecionarLancamentos");
             }
-
-            return View(lancamento);
+            catch
+            {
+                return View();
+            }
         }
 
-        // POST: Lancamentos/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        // GET: Funcionario/ExcluirFuncionario/5
+        public ActionResult ExcluirLancamento(int id)
         {
-            var lancamento = await _context.Lancamentos.FindAsync(id);
-            _context.Lancamentos.Remove(lancamento);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            try
+            {
+                var lancRepository = new LancamentoRepository();
 
-        private bool LancamentoExists(int id)
-        {
-            return _context.Lancamentos.Any(e => e.id == id);
+                if (lancRepository.ExcluirLancamento(id))
+                {
+                    ViewBag.AlertMsg = "Lancamento excluído com sucesso.";
+                }
+
+                return RedirectToAction("SelecionarLancamentos");
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }

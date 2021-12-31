@@ -22,11 +22,12 @@ namespace GestaoFutebolAmador
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=localhost\MSSQLSERVER01; initial Catalog=GFA; User ID=sa; password=1234; language=Portuguese; Trusted_Connection=True");
+            optionsBuilder.UseSqlServer(@"Data Source=localhost\MSSQLSERVER01; initial Catalog=GFA; User ID=sa; password=1234")
+                .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             optionsBuilder.UseLazyLoadingProxies();
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Scout>()
                 .HasOne(s => s.fk_jogador)
@@ -47,6 +48,6 @@ namespace GestaoFutebolAmador
                 .HasOne(s => s.fk_conta)
                 .WithMany(f => f.Financeiros)
                 .OnDelete(DeleteBehavior.ClientCascade);
-        }
+        }*/
     }
 }

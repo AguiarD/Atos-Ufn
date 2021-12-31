@@ -30,17 +30,17 @@ namespace GestaoFinanceira.Migrations
                         .HasMaxLength(80)
                         .HasColumnType("nvarchar(80)");
 
-                    b.Property<DateTime>("dt_baixa")
+                    b.Property<DateTime?>("dt_baixa")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("dt_previsao")
+                    b.Property<DateTime?>("dt_previsao")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("grupo")
                         .HasMaxLength(80)
                         .HasColumnType("nvarchar(80)");
 
-                    b.Property<DateTime>("inativo")
+                    b.Property<DateTime?>("inativo")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("obs")

@@ -19,7 +19,9 @@ namespace GestaoFinanceira
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=localhost\MSSQLSERVER01; initial Catalog=GestaoFinanceira; User ID=sa; password=1234; language=Portuguese; Trusted_Connection=True");
+                //.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             optionsBuilder.UseLazyLoadingProxies();
+            //optionsBuilder.UseChangeTrackingProxies();
         }
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)

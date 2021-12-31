@@ -4,11 +4,29 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Lançamentos</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Novo</a>
 </p>
+
+<form>
+    <div class="form-group">
+        <label for="selectAno">Ano</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            @*<option>2021</option>
+                <option>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+                <option>2017</option>*@
+            @foreach (var lancamento in @Model)
+            {
+                <option>@lancamento.dt_previsao.ToString()</option>
+            }
+        </select>
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -33,9 +51,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.dt_baixa)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.inativo)
-            </th>
+            </th>*@
             <th></th>
         </tr>
     </thead>
@@ -63,13 +81,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.dt_baixa)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.inativo)
-            </td>
+            </td>*@
             <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Deletar</a>
             </td>
         </tr>
 }

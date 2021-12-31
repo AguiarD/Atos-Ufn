@@ -18,7 +18,6 @@ C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5
 C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\WebApplicationMvc.RazorAssemblyInfo.cache
 C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\WebApplicationMvc.RazorAssemblyInfo.cs
 C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\staticwebassets\WebApplicationMvc.StaticWebAssets.Manifest.cache
-C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\staticwebassets\WebApplicationMvc.StaticWebAssets.xml
 C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\scopedcss\bundle\WebApplicationMvc.styles.css
 C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\WebApplicationMvc.TagHelpers.input.cache
 C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\WebApplicationMvc.TagHelpers.output.cache
@@ -43,3 +42,4 @@ C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5
 C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\Razor\Views\Pessoa\Index.cshtml.g.cs
 C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\Razor\Views\Pessoa\Index1.cshtml.g.cs
 C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\Razor\Views\Pessoa\InstanciaPessoa.cshtml.g.cs
+C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\bin\Debug\net5.0\WebApplicationMvc.StaticWebAssets.xml

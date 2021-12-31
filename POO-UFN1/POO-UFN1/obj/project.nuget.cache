@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DnzCx5wX6BTaJHvA3wg5B+Zp6Mj5q+gwQeKrNqAkc0MtC9xxoxfmxUu3qbvkztoOdJkGeoVvbruAScbefMp+DA==",
+  "dgSpecHash": "4TjeiisrZv+ZG6HKfkc2WZzfNkl8kB5WKKl3J45Hm+HUwa8fI4FSi1/6j3RtQ/4eOsrpnpx3usicAhbkSFiy3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Cliente\\source\\repos\\POO-UFN1\\POO-UFN1\\POO-UFN1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Cliente\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
   "logs": []
 }

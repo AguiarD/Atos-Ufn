@@ -18,14 +18,20 @@ namespace GestaoFinanceira.Models
 
         //[Required(ErrorMessage = "Informe o Grupo")]
         [MaxLength(80, ErrorMessage = "O tipo deve ter no máximo 80 caracteres")]
-        public string grupo { get; set; }
+        public string? grupo { get; set; }
 
         //[Required(ErrorMessage = "Informe a Conta")]
         [MaxLength(80, ErrorMessage = "A conta deve ter no máximo 80 caracteres")]
-        public string conta { get; set; }
-        public string obs { get; set; }
-        public DateTime dt_previsao { get; set; }
-        public DateTime dt_baixa { get; set; }
-        public DateTime inativo { get; set; }
+        public string? conta { get; set; }
+        public string? obs { get; set; }
+        
+        [DisplayFormat(DataFormatString = "{0:d}")]
+        public DateTime? dt_previsao { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:d}")]
+        public DateTime? dt_baixa { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:d}")]
+        public DateTime? inativo { get; set; }
     }
 }

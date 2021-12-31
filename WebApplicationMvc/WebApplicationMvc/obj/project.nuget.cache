@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "r29f5YD97pE6CHLq6UFf0lfWhYaWpLdcrf4BvvwGpw3NT8aDdC3nHuWE35dQAIyF+6/7MjfBRAifjMivzpaDNQ==",
+  "dgSpecHash": "PBMC9kPFCcmy8h3B/yGMux26zJIHKE59GPNdEcSvktR9i5AiFDXIABWlZkzbJ+MiHzu+fyoqlAeX5gLovHCM5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Cliente\\source\\repos\\WebApplicationMvc\\WebApplicationMvc\\WebApplicationMvc.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Cliente\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
   "logs": []
 }
