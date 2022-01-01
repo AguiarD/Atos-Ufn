@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoFinanceira", "GestaoFinanceira\GestaoFinanceira.csproj", "{0E141402-CFBE-4CE2-93B7-DB364EF3FC38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoFinanceira", "GestaoFinanceira\GestaoFinanceira.csproj", "{FBFCE7F8-1B4F-4603-AD7F-1B4D0E060AB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0E141402-CFBE-4CE2-93B7-DB364EF3FC38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E141402-CFBE-4CE2-93B7-DB364EF3FC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E141402-CFBE-4CE2-93B7-DB364EF3FC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E141402-CFBE-4CE2-93B7-DB364EF3FC38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBFCE7F8-1B4F-4603-AD7F-1B4D0E060AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBFCE7F8-1B4F-4603-AD7F-1B4D0E060AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBFCE7F8-1B4F-4603-AD7F-1B4D0E060AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBFCE7F8-1B4F-4603-AD7F-1B4D0E060AB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {99BA0D8A-B1F5-4EA1-A728-500A70ED2299}
+		SolutionGuid = {4A26CFD5-0F4B-4250-A8C6-AC94B5B95EBD}
 	EndGlobalSection
 EndGlobal
