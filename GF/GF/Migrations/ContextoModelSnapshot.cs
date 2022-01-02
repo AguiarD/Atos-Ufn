@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
+#nullable disable
+
 namespace GF.Migrations
 {
     [DbContext(typeof(Contexto))]
@@ -15,48 +17,156 @@ namespace GF.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.13")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "6.0.1")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            modelBuilder.Entity("GF.Models.Lancamento", b =>
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("GF.Models.Conta", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
-                    b.Property<string>("conta")
-                        .HasMaxLength(80)
-                        .HasColumnType("nvarchar(80)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("dt_baixa")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("dt_previsao")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("grupo")
-                        .HasMaxLength(80)
-                        .HasColumnType("nvarchar(80)");
-
-                    b.Property<DateTime>("inativo")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("obs")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("tipo")
+                    b.Property<string>("DescConta")
                         .IsRequired()
                         .HasMaxLength(80)
                         .HasColumnType("nvarchar(80)");
 
-                    b.Property<double>("valor")
-                        .HasColumnType("float");
+                    b.Property<DateTime?>("Inativo")
+                        .HasColumnType("datetime2");
 
-                    b.HasKey("id");
+                    b.Property<string>("ObsConta")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contas");
+                });
+
+            modelBuilder.Entity("GF.Models.Grupo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("DescGrupo")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
+
+                    b.Property<DateTime?>("Inativo")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Grupos");
+                });
+
+            modelBuilder.Entity("GF.Models.Lancamento", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Conta")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ContasId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DtBaixa")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DtPrevisao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Grupo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GruposId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Inativo")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ObsLancamento")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Tipo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TiposId")
+                        .HasColumnType("int");
+
+                    b.Property<float>("Valor")
+                        .HasColumnType("real");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ContasId");
+
+                    b.HasIndex("GruposId");
+
+                    b.HasIndex("TiposId");
 
                     b.ToTable("Lancamentos");
+                });
+
+            modelBuilder.Entity("GF.Models.Tipo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("DescTipo")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
+
+                    b.Property<DateTime?>("Inativo")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tipos");
+                });
+
+            modelBuilder.Entity("GF.Models.Lancamento", b =>
+                {
+                    b.HasOne("GF.Models.Conta", "Contas")
+                        .WithMany()
+                        .HasForeignKey("ContasId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GF.Models.Grupo", "Grupos")
+                        .WithMany()
+                        .HasForeignKey("GruposId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GF.Models.Tipo", "Tipos")
+                        .WithMany()
+                        .HasForeignKey("TiposId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Contas");
+
+                    b.Navigation("Grupos");
+
+                    b.Navigation("Tipos");
                 });
 #pragma warning restore 612, 618
         }

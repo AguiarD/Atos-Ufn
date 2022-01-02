@@ -1,31 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace GF.Models
 {
     public class Lancamento
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
 
-        [Required(ErrorMessage = "Informe o Tipo")]
-        [MaxLength(80, ErrorMessage = "O tipo deve ter no máximo 80 caracteres")]
-        public string tipo { get; set; }
-        public double valor { get; set; }
+        public int Tipo { get; set; }
+        public virtual Tipo Tipos { get; set; }
 
-        //[Required(ErrorMessage = "Informe o Grupo")]
-        [MaxLength(80, ErrorMessage = "O tipo deve ter no máximo 80 caracteres")]
-        public string grupo { get; set; }
+        [Required(ErrorMessage = "Obrigatorio")]
+        public float Valor { get; set; }
 
-        //[Required(ErrorMessage = "Informe a Conta")]
-        [MaxLength(80, ErrorMessage = "A conta deve ter no máximo 80 caracteres")]
-        public string conta { get; set; }
-        public string obs { get; set; }
-        public DateTime dt_previsao { get; set; }
-        public DateTime dt_baixa { get; set; }
-        public DateTime inativo { get; set; }
+        public int Grupo { get; set; }
+        public virtual Grupo Grupos { get; set; }
+
+        public int Conta { get; set; }
+        public virtual Conta Contas { get; set; }
+
+
+        [MaxLength(100, ErrorMessage = "Máximo 100 caracteres")]
+        public string? ObsLancamento { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:d}")]
+        public DateTime DtPrevisao { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:d}")]
+        public DateTime? DtBaixa { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:d}")]
+        public DateTime? Inativo { get; set; }
     }
 }

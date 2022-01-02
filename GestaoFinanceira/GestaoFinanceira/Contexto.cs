@@ -22,9 +22,9 @@ namespace GestaoFinanceira
             optionsBuilder.UseLazyLoadingProxies();
         }
 
-        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Scout>()
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+            /*modelBuilder.Entity<Scout>()
                 .HasOne(s => s.fk_jogador)
                 .WithMany(j => j.Scouts)
                 .OnDelete(DeleteBehavior.ClientCascade);
@@ -42,7 +42,22 @@ namespace GestaoFinanceira
             modelBuilder.Entity<Financeiro>()
                 .HasOne(s => s.fk_conta)
                 .WithMany(f => f.Financeiros)
-                .OnDelete(DeleteBehavior.ClientCascade);
-        }*/
+                .OnDelete(DeleteBehavior.ClientCascade);*/
+
+            /*modelBuilder.Entity<Tipo>()
+                .HasOne(b=>b.lancamento)
+                .WithOne(i=>i.Tipos)
+                .HasForeignKey<Lancamento>(b=>b.TipoId);
+
+            modelBuilder.Entity<Grupo>()
+                .HasOne(b => b.lancamento)
+                .WithOne(i => i.Grupos)
+                .HasForeignKey<Lancamento>(b => b.GrupoId);
+
+            modelBuilder.Entity<Conta>()
+                .HasOne(b => b.lancamento)
+                .WithOne(i => i.Contas)
+                .HasForeignKey<Lancamento>(b => b.ContaId);*/
+        //}
     }
 }

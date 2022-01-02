@@ -13,5 +13,7 @@ namespace GestaoFinanceira.Models
 
         [DisplayFormat(DataFormatString = "{0:d}")]
         public DateTime? Inativo { get; set; }
+
+        //public Lancamento lancamento { get; set; }
     }
 }

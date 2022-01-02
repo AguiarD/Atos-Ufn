@@ -98,11 +98,8 @@ namespace GestaoFinanceira.Migrations
                     b.Property<int>("TipoId")
                         .HasColumnType("int");
 
-                    b.Property<string>("TiposId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<float>("Valor")
-                        .HasColumnType("real");
+                    b.Property<decimal>("Valor")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -110,15 +107,18 @@ namespace GestaoFinanceira.Migrations
 
                     b.HasIndex("GrupoId");
 
-                    b.HasIndex("TiposId");
+                    b.HasIndex("TipoId");
 
                     b.ToTable("Lancamentos");
                 });
 
             modelBuilder.Entity("GestaoFinanceira.Models.Tipo", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("DescTipo")
                         .IsRequired()
@@ -149,7 +149,9 @@ namespace GestaoFinanceira.Migrations
 
                     b.HasOne("GestaoFinanceira.Models.Tipo", "Tipos")
                         .WithMany()
-                        .HasForeignKey("TiposId");
+                        .HasForeignKey("TipoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Contas");
 

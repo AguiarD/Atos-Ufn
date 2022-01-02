@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "76d4d8c2-be95-4bb3-8c25-a69b4309d5ac": {
+      "ProjectGuid": "76d4d8c2-be95-4bb3-8c25-a69b4309d5ac",
+      "DisplayName": "GPS",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -27,7 +27,7 @@ namespace GestaoFinanceira.Controllers
         }
 
         // GET: Tipo/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -67,7 +67,7 @@ namespace GestaoFinanceira.Controllers
         }
 
         // GET: Tipo/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -87,7 +87,7 @@ namespace GestaoFinanceira.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,DescTipo,Inativo")] Tipo tipo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,DescTipo,Inativo")] Tipo tipo)
         {
             if (id != tipo.Id)
             {
@@ -118,7 +118,7 @@ namespace GestaoFinanceira.Controllers
         }
 
         // GET: Tipo/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
@@ -138,7 +138,7 @@ namespace GestaoFinanceira.Controllers
         // POST: Tipo/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var tipo = await _context.Tipos.FindAsync(id);
             _context.Tipos.Remove(tipo);
@@ -146,7 +146,7 @@ namespace GestaoFinanceira.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool TipoExists(string id)
+        private bool TipoExists(int id)
         {
             return _context.Tipos.Any(e => e.Id == id);
         }
