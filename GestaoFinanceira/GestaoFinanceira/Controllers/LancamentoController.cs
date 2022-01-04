@@ -27,6 +27,11 @@ namespace GestaoFinanceira.Controllers
             return View(await contexto.ToListAsync());
         }
 
+        //public ActionResult Index(string sortOrder)
+        //{
+        //    ViewBag.
+        //}
+
         // GET: Lancamento/Details/5
         public async Task<IActionResult> Details(int? id)
         {
