@@ -44,7 +44,7 @@ namespace GestaoFinanceira.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contas");
+                    b.ToTable("Contas", (string)null);
                 });
 
             modelBuilder.Entity("GestaoFinanceira.Models.Grupo", b =>
@@ -65,7 +65,7 @@ namespace GestaoFinanceira.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Grupos");
+                    b.ToTable("Grupos", (string)null);
                 });
 
             modelBuilder.Entity("GestaoFinanceira.Models.Lancamento", b =>
@@ -109,7 +109,7 @@ namespace GestaoFinanceira.Migrations
 
                     b.HasIndex("TipoId");
 
-                    b.ToTable("Lancamentos");
+                    b.ToTable("Lancamentos", (string)null);
                 });
 
             modelBuilder.Entity("GestaoFinanceira.Models.Tipo", b =>
@@ -130,7 +130,7 @@ namespace GestaoFinanceira.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tipos");
+                    b.ToTable("Tipos", (string)null);
                 });
 
             modelBuilder.Entity("GestaoFinanceira.Models.Lancamento", b =>

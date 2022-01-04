@@ -9,20 +9,7 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-
-<form>
-    <div>
-        <label>Mes</label>
-        <select>
-            @foreach (var lancamento in @Model)
-           {
-               <option>@lancamento.DtPrevisao.Month</option>
-           }
-        </select>
-    </div>
-</form>
-
-<table class="table table-sm table-striped table-hover table-responsive-md text-center">
+<table class="table">
     <thead>
         <tr>
             <th>

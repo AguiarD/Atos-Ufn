@@ -27,11 +27,6 @@ namespace GestaoFinanceira.Controllers
             return View(await contexto.ToListAsync());
         }
 
-        //public ActionResult Index(string sortOrder)
-        //{
-        //    ViewBag.
-        //}
-
         // GET: Lancamento/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -69,16 +64,16 @@ namespace GestaoFinanceira.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,TipoId,Valor,GrupoId,ContaId,ObsLancamento,DtPrevisao,DtBaixa,Inativo")] Lancamento lancamento)
         {
-            //if (ModelState.IsValid)
-            //{
+            if (ModelState.IsValid)
+            {
                 _context.Add(lancamento);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            //}
-            //ViewData["ContaId"] = new SelectList(_context.Contas, "Id", "DescConta", lancamento.ContaId);
-            //ViewData["GrupoId"] = new SelectList(_context.Grupos, "Id", "DescGrupo", lancamento.GrupoId);
-            //ViewData["TipoId"] = new SelectList(_context.Tipos, "Id", "DescTipo", lancamento.TipoId);
-            //return View(lancamento);
+            }
+            ViewData["ContaId"] = new SelectList(_context.Contas, "Id", "DescConta", lancamento.ContaId);
+            ViewData["GrupoId"] = new SelectList(_context.Grupos, "Id", "DescGrupo", lancamento.GrupoId);
+            ViewData["TipoId"] = new SelectList(_context.Tipos, "Id", "DescTipo", lancamento.TipoId);
+            return View(lancamento);
         }
 
         // GET: Lancamento/Edit/5
