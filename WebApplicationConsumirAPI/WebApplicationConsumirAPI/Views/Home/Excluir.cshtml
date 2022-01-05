@@ -1,0 +1,16 @@
+﻿@model WebApplicationConsumirAPI.Models.Pessoa
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@using (Html.BeginForm("Excluir", "Home", FormMethod.Post)) { //Aqui informo a controller e a view para onde envio o formulario
+    <div>ID:</div>
+    @Html.TextBoxFor(p => p.Id)
+    <br />
+    <br />
+    <input type="submit" value="Excluir" />
+}

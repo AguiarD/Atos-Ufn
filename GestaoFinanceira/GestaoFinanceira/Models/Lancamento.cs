@@ -10,8 +10,8 @@ namespace GestaoFinanceira.Models
         public int TipoId { get; set; }
         public virtual Tipo Tipos { get; set; }
 
-        //[Required(ErrorMessage = "Obrigatorio")]
-        [Range(0, 999.99)]
+        [Required(ErrorMessage = "Obrigatorio")]
+        //[Range(0, 999.99)]
         public decimal Valor { get; set; }
 
         public int GrupoId { get; set; }

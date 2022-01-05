@@ -7,7 +7,7 @@ using WebApplicationAulaRestAPI.Models;
 namespace WebApplicationAulaRestAPI.Controllers
 {
     //[Route("api/[controller]")]
-    [Route("api")]
+    [Route("api")]  // url base (url base-> http://localhost:5852; controller-> api/pessoas; endpoint-> todas)
     [ApiController]
     public class PessoaController : ControllerBase
     {
@@ -69,7 +69,7 @@ namespace WebApplicationAulaRestAPI.Controllers
             catch (Exception ex)
             {
 
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
         }
 
@@ -91,7 +91,7 @@ namespace WebApplicationAulaRestAPI.Controllers
 
             if (p == null)
             {
-                return NotFound();
+                return NotFound("Pessoa não encontrada!");
             }
 
             try
@@ -120,7 +120,7 @@ namespace WebApplicationAulaRestAPI.Controllers
 
             if (p == null)
             {
-                return BadRequest();
+                return BadRequest("Pessoa não encontrada");
             }
 
             try
