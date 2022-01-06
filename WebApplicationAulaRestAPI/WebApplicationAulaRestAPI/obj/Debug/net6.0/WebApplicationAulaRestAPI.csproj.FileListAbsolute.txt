@@ -58,3 +58,4 @@ C:\Users\Cliente\source\repos\WebApplicationAulaRestAPI\WebApplicationAulaRestAP
 C:\Users\Cliente\source\repos\WebApplicationAulaRestAPI\WebApplicationAulaRestAPI\obj\Debug\net6.0\ref\WebApplicationAulaRestAPI.dll
 C:\Users\Cliente\source\repos\WebApplicationAulaRestAPI\WebApplicationAulaRestAPI\obj\Debug\net6.0\WebApplicationAulaRestAPI.pdb
 C:\Users\Cliente\source\repos\WebApplicationAulaRestAPI\WebApplicationAulaRestAPI\obj\Debug\net6.0\WebApplicationAulaRestAPI.genruntimeconfig.cache
+C:\Users\Cliente\source\repos\WebApplicationAulaRestAPI\WebApplicationAulaRestAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
