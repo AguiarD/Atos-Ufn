@@ -27,6 +27,12 @@ namespace GestaoFinanceira.Controllers
             return View(await contexto.ToListAsync());
         }
 
+        /*public async Task<IActionResult> Index()
+        {
+            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos).Where(l => l.DtPrevisao.Year == 2021);
+            return View(await contexto.ToListAsync());
+        }*/
+
         //public async Task<IActionResult> Index(string ano)
         //{
         //    //var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos);
@@ -96,12 +102,12 @@ namespace GestaoFinanceira.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,TipoId,Valor,GrupoId,ContaId,ObsLancamento,DtPrevisao,DtBaixa,Inativo")] Lancamento lancamento)
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 _context.Add(lancamento);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+            //}
             ViewData["ContaId"] = new SelectList(_context.Contas, "Id", "DescConta", lancamento.ContaId);
             ViewData["GrupoId"] = new SelectList(_context.Grupos, "Id", "DescGrupo", lancamento.GrupoId);
             ViewData["TipoId"] = new SelectList(_context.Tipos, "Id", "DescTipo", lancamento.TipoId);
