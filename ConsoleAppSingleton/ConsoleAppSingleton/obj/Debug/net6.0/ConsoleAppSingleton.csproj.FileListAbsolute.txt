@@ -1,0 +1,15 @@
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\bin\Debug\net6.0\ConsoleAppSingleton.exe
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\bin\Debug\net6.0\ConsoleAppSingleton.deps.json
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\bin\Debug\net6.0\ConsoleAppSingleton.runtimeconfig.json
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\bin\Debug\net6.0\ConsoleAppSingleton.dll
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\bin\Debug\net6.0\ref\ConsoleAppSingleton.dll
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\bin\Debug\net6.0\ConsoleAppSingleton.pdb
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\obj\Debug\net6.0\ConsoleAppSingleton.csproj.AssemblyReference.cache
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\obj\Debug\net6.0\ConsoleAppSingleton.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\obj\Debug\net6.0\ConsoleAppSingleton.AssemblyInfoInputs.cache
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\obj\Debug\net6.0\ConsoleAppSingleton.AssemblyInfo.cs
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\obj\Debug\net6.0\ConsoleAppSingleton.csproj.CoreCompileInputs.cache
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\obj\Debug\net6.0\ConsoleAppSingleton.dll
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\obj\Debug\net6.0\ref\ConsoleAppSingleton.dll
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\obj\Debug\net6.0\ConsoleAppSingleton.pdb
+C:\Users\Cliente\source\repos\ConsoleAppSingleton\ConsoleAppSingleton\obj\Debug\net6.0\ConsoleAppSingleton.genruntimeconfig.cache

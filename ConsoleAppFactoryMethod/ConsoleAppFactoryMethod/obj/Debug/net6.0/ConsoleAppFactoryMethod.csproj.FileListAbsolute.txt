@@ -1,0 +1,15 @@
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\bin\Debug\net6.0\ConsoleAppFactoryMethod.exe
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\bin\Debug\net6.0\ConsoleAppFactoryMethod.deps.json
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\bin\Debug\net6.0\ConsoleAppFactoryMethod.runtimeconfig.json
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\bin\Debug\net6.0\ConsoleAppFactoryMethod.dll
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\bin\Debug\net6.0\ref\ConsoleAppFactoryMethod.dll
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\bin\Debug\net6.0\ConsoleAppFactoryMethod.pdb
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\obj\Debug\net6.0\ConsoleAppFactoryMethod.csproj.AssemblyReference.cache
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\obj\Debug\net6.0\ConsoleAppFactoryMethod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\obj\Debug\net6.0\ConsoleAppFactoryMethod.AssemblyInfoInputs.cache
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\obj\Debug\net6.0\ConsoleAppFactoryMethod.AssemblyInfo.cs
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\obj\Debug\net6.0\ConsoleAppFactoryMethod.csproj.CoreCompileInputs.cache
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\obj\Debug\net6.0\ConsoleAppFactoryMethod.dll
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\obj\Debug\net6.0\ref\ConsoleAppFactoryMethod.dll
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\obj\Debug\net6.0\ConsoleAppFactoryMethod.pdb
+C:\Users\Cliente\source\repos\ConsoleAppFactoryMethod\ConsoleAppFactoryMethod\obj\Debug\net6.0\ConsoleAppFactoryMethod.genruntimeconfig.cache

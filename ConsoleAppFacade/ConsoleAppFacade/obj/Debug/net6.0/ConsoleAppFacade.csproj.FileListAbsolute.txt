@@ -1,0 +1,15 @@
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\bin\Debug\net6.0\ConsoleAppFacade.exe
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\bin\Debug\net6.0\ConsoleAppFacade.deps.json
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\bin\Debug\net6.0\ConsoleAppFacade.runtimeconfig.json
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\bin\Debug\net6.0\ConsoleAppFacade.dll
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\bin\Debug\net6.0\ref\ConsoleAppFacade.dll
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\bin\Debug\net6.0\ConsoleAppFacade.pdb
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\obj\Debug\net6.0\ConsoleAppFacade.csproj.AssemblyReference.cache
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\obj\Debug\net6.0\ConsoleAppFacade.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\obj\Debug\net6.0\ConsoleAppFacade.AssemblyInfoInputs.cache
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\obj\Debug\net6.0\ConsoleAppFacade.AssemblyInfo.cs
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\obj\Debug\net6.0\ConsoleAppFacade.csproj.CoreCompileInputs.cache
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\obj\Debug\net6.0\ConsoleAppFacade.dll
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\obj\Debug\net6.0\ref\ConsoleAppFacade.dll
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\obj\Debug\net6.0\ConsoleAppFacade.pdb
+C:\Users\Cliente\source\repos\ConsoleAppFacade\ConsoleAppFacade\obj\Debug\net6.0\ConsoleAppFacade.genruntimeconfig.cache

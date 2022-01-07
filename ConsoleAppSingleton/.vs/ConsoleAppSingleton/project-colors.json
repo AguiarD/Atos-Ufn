@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8e2b9ee9-879c-4802-84c4-037c07295cc8": {
+      "ProjectGuid": "8e2b9ee9-879c-4802-84c4-037c07295cc8",
+      "DisplayName": "ConsoleAppSingleton",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

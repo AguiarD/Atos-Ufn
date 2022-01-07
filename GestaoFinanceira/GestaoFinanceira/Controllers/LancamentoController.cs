@@ -32,18 +32,31 @@ namespace GestaoFinanceira.Controllers
         //    //var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos);
         //    //return View(await contexto.ToListAsync());
 
-        //    var query = from Lancamento in _context.Lancamentos.ToList()
-        //                join Tipo in _context.Tipos.ToList() on Lancamento.TipoId equals Tipo.Id
-        //                join Grupo in _context.Grupos.ToList() on Lancamento.GrupoId equals Grupo.Id
-        //                join Conta in _context.Contas.ToList() on Lancamento.ContaId equals Conta.Id
-        //                where Lancamento.Id > 3
-        //                select new { Lancamento.TipoId, Lancamento.Valor, Lancamento.Grupos, 
-        //                    Lancamento.Contas, Lancamento.ObsLancamento, Lancamento.DtPrevisao, 
-        //                    Lancamento.DtBaixa, Lancamento.Inativo};
-        //                //where Lancamento.DtPrevisao = ano;
-        //    var resultado = query.ToList();
+        //    using (var database =new Contexto())
+        //    {
 
-        //    return View(resultado);
+
+        //        var query = from Lancamento in database.Lancamentos
+        //                    join Tipo in database.Tipos on Lancamento.TipoId equals Tipo.Id
+        //                    join Grupo in database.Grupos on Lancamento.GrupoId equals Grupo.Id
+        //                    join Conta in database.Contas on Lancamento.ContaId equals Conta.Id
+        //                    where Lancamento.Id > 3
+        //                    select new 
+        //                    {
+        //                        Lancamento.TipoId,
+        //                        Lancamento.Valor,
+        //                        Lancamento.Grupos,
+        //                        Lancamento.Contas,
+        //                        Lancamento.ObsLancamento,
+        //                        Lancamento.DtPrevisao,
+        //                        Lancamento.DtBaixa,
+        //                        Lancamento.Inativo
+        //                    };
+        //            //where Lancamento.DtPrevisao = ano;
+        //        var resultado = query.ToList();
+
+        //        return View(resultado);
+        //    }
         //}
 
         // GET: Lancamento/Details/5
