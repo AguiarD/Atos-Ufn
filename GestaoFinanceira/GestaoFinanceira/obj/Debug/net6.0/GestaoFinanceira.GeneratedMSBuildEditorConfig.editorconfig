@@ -63,6 +63,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Cliente/source/repos/GestaoFinanceira/GestaoFinanceira/Views/Lancamento/Ano.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuY2FtZW50b1xBbm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Cliente/source/repos/GestaoFinanceira/GestaoFinanceira/Views/Lancamento/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuY2FtZW50b1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -81,6 +85,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Cliente/source/repos/GestaoFinanceira/GestaoFinanceira/Views/Lancamento/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuY2FtZW50b1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Cliente/source/repos/GestaoFinanceira/GestaoFinanceira/Views/Lancamento/Resumo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuY2FtZW50b1xSZXN1bW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Cliente/source/repos/GestaoFinanceira/GestaoFinanceira/Views/Shared/Error.cshtml]

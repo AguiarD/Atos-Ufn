@@ -64,3 +64,4 @@ C:\Users\Cliente\source\repos\ConsoleAppEntity\ConsoleAppEntity\obj\Debug\net5.0
 C:\Users\Cliente\source\repos\ConsoleAppEntity\ConsoleAppEntity\obj\Debug\net5.0\ref\ConsoleAppEntity.dll
 C:\Users\Cliente\source\repos\ConsoleAppEntity\ConsoleAppEntity\obj\Debug\net5.0\ConsoleAppEntity.pdb
 C:\Users\Cliente\source\repos\ConsoleAppEntity\ConsoleAppEntity\obj\Debug\net5.0\ConsoleAppEntity.genruntimeconfig.cache
+C:\Users\Cliente\source\repos\ConsoleAppEntity\ConsoleAppEntity\obj\Debug\net5.0\ConsoleAppEntity.csproj.CopyComplete

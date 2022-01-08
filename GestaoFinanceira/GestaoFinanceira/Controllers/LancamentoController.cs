@@ -27,11 +27,38 @@ namespace GestaoFinanceira.Controllers
             return View(await contexto.ToListAsync());
         }
 
-        /*public async Task<IActionResult> Index()
+        public async Task<IActionResult> Ano(int ano)
         {
-            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos).Where(l => l.DtPrevisao.Year == 2021);
+            ano = 2021;
+            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos).Where(l => l.DtPrevisao.Year == ano);
             return View(await contexto.ToListAsync());
-        }*/
+        }
+
+        public async Task<IActionResult> Resumo(int? ano)
+        {
+            ano = 2021;
+            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos).Where(l => l.DtPrevisao.Year == ano).Sum(l=>l.Valor);
+            return View(await contexto.ToListAsync());
+
+            /*ano = 2021;
+            /*if (ano == null)
+            {
+                return NotFound();
+            }* /
+
+            var query = await from Lancamento in _context.Lancamentos
+                              where Lancamento.DtPrevisao.Year == ano
+                              group Lancamento by Lancamento.Id into somar
+                              select new
+                              {
+                                  Valor = somar.Sum(l => l.Id),
+                                  Cont = somar.Count()
+                              };
+
+
+            await query.ToListAsync();
+            return View(query);*/
+        }
 
         //public async Task<IActionResult> Index(string ano)
         //{

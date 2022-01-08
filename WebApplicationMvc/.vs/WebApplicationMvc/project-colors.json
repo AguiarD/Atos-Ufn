@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6d2e100b-aeaf-4ea3-a9ac-2d69cba3db03": {
+      "ProjectGuid": "6d2e100b-aeaf-4ea3-a9ac-2d69cba3db03",
+      "DisplayName": "WebApplicationMvc",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
