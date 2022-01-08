@@ -34,63 +34,18 @@ namespace GestaoFinanceira.Controllers
             return View(await contexto.ToListAsync());
         }
 
-        public async Task<IActionResult> Resumo(int? ano)
+        public decimal Resumo(int ano)
         {
-            ano = 2021;
-            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos).Where(l => l.DtPrevisao.Year == ano).Sum(l=>l.Valor);
-            return View(await contexto.ToListAsync());
-
-            /*ano = 2021;
-            /*if (ano == null)
-            {
-                return NotFound();
-            }* /
-
-            var query = await from Lancamento in _context.Lancamentos
-                              where Lancamento.DtPrevisao.Year == ano
-                              group Lancamento by Lancamento.Id into somar
-                              select new
-                              {
-                                  Valor = somar.Sum(l => l.Id),
-                                  Cont = somar.Count()
-                              };
+            ano = 2021;  //ano precisa vir de formulario
+            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+                .Where(l => l.DtPrevisao.Year == ano)
+                .Sum(l => l.Valor);
 
 
-            await query.ToListAsync();
-            return View(query);*/
+            return contexto;
         }
 
-        //public async Task<IActionResult> Index(string ano)
-        //{
-        //    //var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos);
-        //    //return View(await contexto.ToListAsync());
 
-        //    using (var database =new Contexto())
-        //    {
-
-
-        //        var query = from Lancamento in database.Lancamentos
-        //                    join Tipo in database.Tipos on Lancamento.TipoId equals Tipo.Id
-        //                    join Grupo in database.Grupos on Lancamento.GrupoId equals Grupo.Id
-        //                    join Conta in database.Contas on Lancamento.ContaId equals Conta.Id
-        //                    where Lancamento.Id > 3
-        //                    select new 
-        //                    {
-        //                        Lancamento.TipoId,
-        //                        Lancamento.Valor,
-        //                        Lancamento.Grupos,
-        //                        Lancamento.Contas,
-        //                        Lancamento.ObsLancamento,
-        //                        Lancamento.DtPrevisao,
-        //                        Lancamento.DtBaixa,
-        //                        Lancamento.Inativo
-        //                    };
-        //            //where Lancamento.DtPrevisao = ano;
-        //        var resultado = query.ToList();
-
-        //        return View(resultado);
-        //    }
-        //}
 
         // GET: Lancamento/Details/5
         public async Task<IActionResult> Details(int? id)
