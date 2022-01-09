@@ -42,4 +42,3 @@ C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5
 C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\Razor\Views\Pessoa\Index.cshtml.g.cs
 C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\Razor\Views\Pessoa\Index1.cshtml.g.cs
 C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\obj\Debug\net5.0\Razor\Views\Pessoa\InstanciaPessoa.cshtml.g.cs
-C:\Users\Cliente\source\repos\WebApplicationMvc\WebApplicationMvc\bin\Debug\net5.0\WebApplicationMvc.StaticWebAssets.xml

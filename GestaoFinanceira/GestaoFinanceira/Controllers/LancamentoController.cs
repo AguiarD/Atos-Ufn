@@ -92,6 +92,77 @@ namespace GestaoFinanceira.Controllers
             ViewBag.SaldoAberto = saldoAberto;
 
 
+            //Grupo Pessoa
+            var grupoPessoa = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.GrupoId == 1)
+                .Sum(l => l.Valor)
+                //.GroupBy(l => l.GrupoId)
+                //.Select(g => new { GrupoId = g.Key, Valor = g.Sum(l => l.Valor) })
+                ;
+
+            ViewBag.GrupoPessoal = grupoPessoa;
+
+
+            //Grupo Casa
+            var grupoCasa = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.GrupoId == 2)
+                .Sum(l => l.Valor)
+                //.GroupBy(l => l.GrupoId)
+                //.Select(g => new { GrupoId = g.Key, Valor = g.Sum(l => l.Valor) })
+                ;
+
+            ViewBag.GrupoCasa = grupoCasa;
+
+
+            //Grupo Trabalho
+            var grupoTrabalho = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.GrupoId == 3)
+                .Sum(l => l.Valor)
+                //.GroupBy(l => l.GrupoId)
+                //.Select(g => new { GrupoId = g.Key, Valor = g.Sum(l => l.Valor) })
+                ;
+
+            ViewBag.GrupoTrabalho = grupoTrabalho;
+
+
+            //Grupo Transporte
+            var grupoTransporte = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.GrupoId == 4)
+                .Sum(l => l.Valor)
+                //.GroupBy(l => l.GrupoId)
+                //.Select(g => new { GrupoId = g.Key, Valor = g.Sum(l => l.Valor) })
+                ;
+
+            ViewBag.GrupoTransporte = grupoTransporte;
+
+
+            //Grupo Reserva
+            var grupoReserva = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.GrupoId == 5)
+                .Sum(l => l.Valor)
+                //.GroupBy(l => l.GrupoId)
+                //.Select(g => new { GrupoId = g.Key, Valor = g.Sum(l => l.Valor) })
+                ;
+
+            ViewBag.GrupoReserva = grupoReserva;
+
+
+            //Grupo CartaoD10
+            var grupoCartaoD10 = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.GrupoId == 6)
+                .Sum(l => l.Valor)
+                //.GroupBy(l => l.GrupoId)
+                //.Select(g => new { GrupoId = g.Key, Valor = g.Sum(l => l.Valor) })
+                ;
+
+            ViewBag.GrupoCartaoD10 = grupoCartaoD10;
+
             return View();
         }
 
