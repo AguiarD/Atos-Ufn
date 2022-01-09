@@ -4,29 +4,46 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Lancamentos - @ViewBag.Ano</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 
 @*<form>*@
 @using (Html.BeginForm("Index", "Lancamento", FormMethod.Post))
 {
-    <label>Ano</label>
-    <select id="ano">
-        <option></option>
-        @foreach (var lancamento in @Model)
-        {
-            <option>@lancamento.DtPrevisao.Year</option>
-        }
-    </select>    
+    <div class="form-group">
+        <label>Ano</label>
+        <select class="form-control form-control-lg" id="formAno">
+            <option></option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+    @*        @foreach (var lancamento in @Model)
+            {
+                <option>@lancamento.DtPrevisao.Year</option>
+            }*@
+        </select>
+    </div>
 }
 @*</form>*@
 
 <hr />
 
-<table class="table">
+<nav class="navNovo">
+    <ul>
+        <li><a asp-action="Create">Novo</a></li>
+        <li><a asp-action="Resumo">Resumo</a></li>
+    </ul>
+</nav>
+@*<p>
+    <a asp-action="Create">Novo</a>
+</p>
+
+<p>
+    <a asp-action="Resumo">Resumo</a>
+</p>*@
+
+
+<table class="table table-striped table-hover">
     <thead>
         <tr>
             <th>
@@ -50,10 +67,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.DtBaixa)
             </th>
-            <th>
+@*            <th>
                 @Html.DisplayNameFor(model => model.Inativo)
-            </th>
-            <th></th>
+            </th>*@
+            <th>Admin</th>
         </tr>
     </thead>
     <tbody>
@@ -80,13 +97,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DtBaixa)
             </td>
-            <td>
+@*            <td>
                 @Html.DisplayFor(modelItem => item.Inativo)
-            </td>
+            </td>*@
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
             </td>
         </tr>
 }

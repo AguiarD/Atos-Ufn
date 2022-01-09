@@ -23,7 +23,9 @@ namespace GestaoFinanceira.Controllers
         // GET: Lancamento
         public async Task<IActionResult> Index()
         {
-            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos);
+            var ano = DateTime.Now.Year;
+            ViewBag.Ano = ano; //Passar variavel para view
+            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos).Where(l=>l.DtPrevisao.Year == ano);
             return View(await contexto.ToListAsync());
         }
 
@@ -34,16 +36,77 @@ namespace GestaoFinanceira.Controllers
             return View(await contexto.ToListAsync());
         }
 
-        public decimal Resumo(int ano)
+        public async Task<IActionResult> Resumo(int ano)
         {
+            //ano = 2021;  //ano precisa vir de formulario
+            //var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+            //    .Where(l => l.DtPrevisao.Year == ano)
+            //    //.Where(l => l.Inativo == null)
+            //    .Sum(l => l.Valor);
+
             ano = 2021;  //ano precisa vir de formulario
-            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+            ViewBag.Ano = ano;
+
+            //RESUMO
+            var contextoReceita = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
                 .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.TipoId == 1)
+                //.Where(l => l.Inativo == null)
                 .Sum(l => l.Valor);
+            ViewBag.Receita = contextoReceita;
+            //ViewData["dReceita"] = contextoReceita;
 
 
-            return contexto;
+            var contextoDespesa = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.TipoId == 2)
+                //.Where(l => l.Inativo == null)
+                .Sum(l => l.Valor);
+            contextoDespesa = contextoDespesa * -1;
+            ViewBag.Despesa = contextoDespesa;
+            //ViewData["dDespesa"] = contextoDespesa;
+
+            var saldoGeral = contextoReceita + contextoDespesa;
+            ViewBag.SaldoGeral = saldoGeral;
+
+
+
+            //RESUMO ABERTO
+
+            var contextoReceitaAberto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.TipoId == 1)
+                .Where(l => l.DtBaixa == null)
+                .Sum(l => l.Valor);
+            ViewBag.ReceitaAberto = contextoReceitaAberto;
+
+            var contextoDespesaAberto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.TipoId == 2)
+                .Where(l => l.DtBaixa == null)
+                .Sum(l => l.Valor);
+            contextoDespesaAberto = contextoDespesaAberto * -1;
+            ViewBag.DespesaAberto = contextoDespesaAberto;
+
+            var saldoAberto = contextoReceitaAberto + contextoDespesaAberto;
+            ViewBag.SaldoAberto = saldoAberto;
+
+
+            return View();
         }
+
+        //public decimal Receita(int ano)
+        //{
+        //    ano = 2021;  //ano precisa vir de formulario
+        //    var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+        //        .Where(l => l.DtPrevisao.Year == ano)
+        //        .Where(l => l.TipoId == 1)
+        //        //.Where(l => l.Inativo == null)
+        //        .Sum(l => l.Valor);
+        //    ViewBag.Receita = contexto;
+
+        //    return contexto;
+        //}
 
 
 

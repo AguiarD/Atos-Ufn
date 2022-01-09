@@ -1,11 +1,102 @@
-﻿@model GestaoFinanceira.Models.Lancamento
+﻿@*@model GestaoFinanceira.Models.Lancamento*@
+@model IEnumerable<GestaoFinanceira.Models.Lancamento>
 
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
 @{
+    ViewData["Title"] = "Index";
 }
 
-<h3>Soma: @Model.Grupos</h3>
-<h3>Soma: @Model.GrupoId</h3>
-<h3>Soma: @Model.Valor</h3>
+<h1>Resumo - @ViewBag.Ano</h1>
+
+
+@*<form>*@
+@using (Html.BeginForm("Index", "Lancamento", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Ano</label>
+        <select class="form-control form-control-lg" id="formAno">
+            <option></option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+    @*        @foreach (var lancamento in @Model)
+            {
+                <option>@lancamento.DtPrevisao.Year</option>
+            }*@
+        </select>
+    </div>
+}
+@*</form>*@
+
+<hr />
+
+<table class="table table-sm table-hover"> @*Atualizar com o loop*@
+    <thead>
+        <tr  class="table-dark">
+            <th>
+                Tipo
+            </th>
+            <th>
+                Valor
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-secondary">
+            <td colspan="2">Geral</td>
+        </tr>
+        <tr class="table-success">
+            <td>
+                Receita
+            </td>
+            <td>
+                @ViewBag.Receita
+            </td>
+        </tr>
+        <tr class="table-danger">
+            <td>
+                Despesa
+            </td>
+            <td>
+                @ViewBag.Despesa
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Total Geral
+            </td>
+            <td>
+                @ViewBag.SaldoGeral
+            </td>
+        </tr>
+        <tr><td> </td> <td> </td></tr>
+
+        <tr class="table-secondary">
+            <td colspan="2">Aberto</td>
+        </tr>
+        <tr class="table-success">
+            <td>
+                Receita
+            </td>
+            <td>
+                @ViewBag.ReceitaAberto
+            </td>
+        </tr>
+        <tr class="table-danger">
+            <td>
+                Despesa
+            </td>
+            <td>
+                @ViewBag.DespesaAberto
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Total Aberto
+            </td>
+            <td>
+                @ViewBag.SaldoAberto
+            </td>
+        </tr>
+
+    </tbody>
+</table>
