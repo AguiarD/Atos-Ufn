@@ -21,18 +21,22 @@ namespace GestaoFinanceira.Controllers
         }
 
         // GET: Lancamento
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string ano)
         {
-            var ano = DateTime.Now.Year;
+            if (Ano == null)
+            {
+                ano = "?ano="+DateTime.Now.Year;
+            }
+
             ViewBag.Ano = ano; //Passar variavel para view
-            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos).Where(l=>l.DtPrevisao.Year == ano);
+            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos).Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano));
             return View(await contexto.ToListAsync());
         }
 
-        public async Task<IActionResult> Ano(int ano)
+        public async Task<IActionResult> Ano(string ano)
         {
-            ano = 2021;
-            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos).Where(l => l.DtPrevisao.Year == ano);
+            //ano = "2021";
+            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos).Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano));
             return View(await contexto.ToListAsync());
         }
 

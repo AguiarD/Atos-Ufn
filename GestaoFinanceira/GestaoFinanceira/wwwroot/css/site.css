@@ -13,9 +13,14 @@ html {
   min-height: 100%;
 }
 
+header {
+    background: linear-gradient(#faedaf, #fffef9);
+}
+
 body {
     margin-bottom: 60px;
-    /*background: #333333;*/
+    /*background: #f6efcc;*/
+    background: linear-gradient(#faedaf, #fffef9);
 }
 
 main h1 {
@@ -24,6 +29,56 @@ main h1 {
 
 .table {
     text-align: center;
+}
+
+.navNovo ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+    /*background: #ffffff;*/
+    border-radius: 5px;
+}
+
+.navNovo li {
+    display: inline;
+}
+
+.navNovo a {
+    text-decoration: none;
+    font-weight: bold;
+    color: green;
+}
+
+.navNovo a:hover {
+    text-decoration: underline;
+}
+
+/*.form-group {
+    text-align: -webkit-center;
+}
+
+.form-control {
+    align-items: center;
+    width: 10%;
+    text-align: center;
+}*/
+
+.table {
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.table-secondary td{
+    font-weight: bolder;
+}
+
+.table a {
+    text-decoration: none;
+    color: green;
+}
+
+a img {
+    height: 22px;
 }
 
 /*.navNovo {*/
