@@ -13,8 +13,17 @@ html {
   min-height: 100%;
 }
 
-header {
-    background: linear-gradient(#faedaf, #fffef9);
+.navbar {
+    background: linear-gradient(#dcdbd6, #808080);
+}
+
+.navbar-light .navbar-brand {
+    color: green;
+}
+
+.navbar a {
+    /*color: antiquewhite;*/
+    font-weight: bolder;
 }
 
 body {
@@ -63,9 +72,32 @@ main h1 {
     text-align: center;
 }*/
 
+/*.formLancamento {
+    width: 40%;
+    display: flex;
+}
+
+.formLancamento select {
+    max-width: 20%;
+}*/
+
+.containerForm {
+    max-width: 30%;
+}
+
 .table {
     background: #ffffff;
     border-radius: 5px;
+}
+
+.tableReceita {
+    color: darkgreen;
+    font-weight: bolder;
+}
+
+.tableDespesa {
+    color: darkred;
+    font-weight: bolder;
 }
 
 .table-secondary td{
@@ -79,6 +111,14 @@ main h1 {
 
 a img {
     height: 22px;
+}
+
+.pResumo {
+    font-weight: bolder;
+}
+
+.deleteConfirma {
+    color: darkred;
 }
 
 /*.navNovo {*/

@@ -23,13 +23,13 @@ namespace GestaoFinanceira.Controllers
         // GET: Lancamento
         public async Task<IActionResult> Index(string ano)
         {
-            if (Ano == null)
+            if (ano == null)
             {
-                ano = "?ano="+DateTime.Now.Year;
+                ano = Convert.ToString(DateTime.Now.Year);
             }
 
             ViewBag.Ano = ano; //Passar variavel para view
-            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos).Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano));
+            var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos).OrderBy(l => l.TipoId).Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano));
             return View(await contexto.ToListAsync());
         }
 
@@ -40,7 +40,7 @@ namespace GestaoFinanceira.Controllers
             return View(await contexto.ToListAsync());
         }
 
-        public async Task<IActionResult> Resumo(int ano)
+        public async Task<IActionResult> Resumo(string ano)
         {
             //ano = 2021;  //ano precisa vir de formulario
             //var contexto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
@@ -48,12 +48,17 @@ namespace GestaoFinanceira.Controllers
             //    //.Where(l => l.Inativo == null)
             //    .Sum(l => l.Valor);
 
-            ano = 2021;  //ano precisa vir de formulario
+            if (ano == null)
+            {
+                ano = Convert.ToString(DateTime.Now.Year);
+            }
+
+            //ano = 2021;  //ano precisa vir de formulario
             ViewBag.Ano = ano;
 
             //RESUMO
             var contextoReceita = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
-                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
                 .Where(l => l.TipoId == 1)
                 //.Where(l => l.Inativo == null)
                 .Sum(l => l.Valor);
@@ -62,7 +67,7 @@ namespace GestaoFinanceira.Controllers
 
 
             var contextoDespesa = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
-                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
                 .Where(l => l.TipoId == 2)
                 //.Where(l => l.Inativo == null)
                 .Sum(l => l.Valor);
@@ -78,14 +83,14 @@ namespace GestaoFinanceira.Controllers
             //RESUMO ABERTO
 
             var contextoReceitaAberto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
-                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
                 .Where(l => l.TipoId == 1)
                 .Where(l => l.DtBaixa == null)
                 .Sum(l => l.Valor);
             ViewBag.ReceitaAberto = contextoReceitaAberto;
 
             var contextoDespesaAberto = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
-                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
                 .Where(l => l.TipoId == 2)
                 .Where(l => l.DtBaixa == null)
                 .Sum(l => l.Valor);
@@ -98,7 +103,7 @@ namespace GestaoFinanceira.Controllers
 
             //Grupo Pessoa
             var grupoPessoa = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
-                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
                 .Where(l => l.GrupoId == 1)
                 .Sum(l => l.Valor)
                 //.GroupBy(l => l.GrupoId)
@@ -110,7 +115,7 @@ namespace GestaoFinanceira.Controllers
 
             //Grupo Casa
             var grupoCasa = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
-                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
                 .Where(l => l.GrupoId == 2)
                 .Sum(l => l.Valor)
                 //.GroupBy(l => l.GrupoId)
@@ -122,7 +127,7 @@ namespace GestaoFinanceira.Controllers
 
             //Grupo Trabalho
             var grupoTrabalho = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
-                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
                 .Where(l => l.GrupoId == 3)
                 .Sum(l => l.Valor)
                 //.GroupBy(l => l.GrupoId)
@@ -134,7 +139,7 @@ namespace GestaoFinanceira.Controllers
 
             //Grupo Transporte
             var grupoTransporte = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
-                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
                 .Where(l => l.GrupoId == 4)
                 .Sum(l => l.Valor)
                 //.GroupBy(l => l.GrupoId)
@@ -146,7 +151,7 @@ namespace GestaoFinanceira.Controllers
 
             //Grupo Reserva
             var grupoReserva = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
-                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
                 .Where(l => l.GrupoId == 5)
                 .Sum(l => l.Valor)
                 //.GroupBy(l => l.GrupoId)
@@ -158,7 +163,7 @@ namespace GestaoFinanceira.Controllers
 
             //Grupo CartaoD10
             var grupoCartaoD10 = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
-                .Where(l => l.DtPrevisao.Year == ano)
+                .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
                 .Where(l => l.GrupoId == 6)
                 .Sum(l => l.Valor)
                 //.GroupBy(l => l.GrupoId)

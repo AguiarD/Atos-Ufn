@@ -4,25 +4,28 @@
     ViewData["Title"] = "Index";
 }
 
-<h1 id="anoH1">Lançamentos - @ViewBag.Ano</h1>
+<h1 id="anoH1">Lançamentos @ViewBag.Ano</h1>
 
 
 @*<form>*@
 @using (Html.BeginForm("Index", "Lancamento", FormMethod.Get))
 {
-    <div class="form-group">
-        @*<label>Ano</label>*@
-        <select class="form-control" id="ano" name="ano" onchange="funcaoAno(this.value)">
-            <option disabled selected>Ano</option>
-            <option>2020</option>
-            <option>2021</option>
-            <option>2022</option>
-            @*@foreach (var lancamento in @Model)
-            {
-                <option>@lancamento.DtPrevisao.Year</option>
-            }*@
-        </select>
-        <input type="submit"/>
+    <div class="containerForm">
+        <div class="input-group mb-3">
+            @*<label>Ano</label>*@
+            <select class="form-control" id="ano" name="ano" onchange="funcaoAno(this.value)">
+                <option disabled selected>Ano</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                @*@foreach (var lancamento in @Model)
+                {
+                    <option>@lancamento.DtPrevisao.Year</option>
+                }*@
+            </select>
+            <input class="btn btn-outline-secondary" type="submit"/>
+        </div>
+
     </div>
 }
 @*</form>*@
