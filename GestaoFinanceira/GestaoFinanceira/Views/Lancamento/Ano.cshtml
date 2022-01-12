@@ -6,6 +6,31 @@
 
 <h1>2021</h1>
 
+<hr />
+
+@*<form>*@
+@using (Html.BeginForm("Ano", "Lancamento", FormMethod.Get))
+{
+    <div class="form-group">
+        @*<label>Ano</label>*@
+@*        <input id="inpIdData" type="text" name="ano" value="" />
+        <input type="submit"/>*@
+
+        <select class="form-control" id="ano" name="ano">
+            <option disabled selected>Ano</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+@*            @foreach (var lancamento in @Model)
+            {
+                <option>@lancamento.DtPrevisao.Year</option>
+            }*@
+        </select>
+        <input type="submit"/>
+    </div>
+}
+@*</form>*@
+
 <p>
     <a asp-action="Create">Inserir Registro</a>
 </p>

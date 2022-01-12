@@ -4,24 +4,25 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Lancamentos - @ViewBag.Ano</h1>
+<h1 id="anoH1">Lançamentos - @ViewBag.Ano</h1>
 
 
 @*<form>*@
-@using (Html.BeginForm("Index", "Lancamento", FormMethod.Post))
+@using (Html.BeginForm("Index", "Lancamento", FormMethod.Get))
 {
     <div class="form-group">
-        <label>Ano</label>
-        <select class="form-control form-control-lg" id="formAno">
-            <option></option>
+        @*<label>Ano</label>*@
+        <select class="form-control" id="ano" name="ano" onchange="funcaoAno(this.value)">
+            <option disabled selected>Ano</option>
             <option>2020</option>
             <option>2021</option>
             <option>2022</option>
-    @*        @foreach (var lancamento in @Model)
+            @*@foreach (var lancamento in @Model)
             {
                 <option>@lancamento.DtPrevisao.Year</option>
             }*@
         </select>
+        <input type="submit"/>
     </div>
 }
 @*</form>*@
@@ -45,7 +46,7 @@
 
 <table class="table table-striped table-hover">
     <thead>
-        <tr>
+        <tr class="table-dark">
             <th>
                 @Html.DisplayNameFor(model => model.Tipos)
             </th>
@@ -101,9 +102,9 @@
                 @Html.DisplayFor(modelItem => item.Inativo)
             </td>*@
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                <a asp-action="Edit" asp-route-id="@item.Id" title="Editar"><img src=~/css/editar.png></a> |
+                <a asp-action="Details" asp-route-id="@item.Id" title="Detalhes"><img src=~/css/detalhes.png></a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" title="Deletar"><img src=~/css/deletar.png></a>
             </td>
         </tr>
 }

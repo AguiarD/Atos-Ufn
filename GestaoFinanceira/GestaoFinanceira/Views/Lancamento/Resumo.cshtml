@@ -12,9 +12,9 @@
 @using (Html.BeginForm("Index", "Lancamento", FormMethod.Post))
 {
     <div class="form-group">
-        <label>Ano</label>
+        @*<label>Ano</label>*@
         <select class="form-control form-control-lg" id="formAno">
-            <option></option>
+            <option disabled selected>Ano</option>
             <option>2020</option>
             <option>2021</option>
             <option>2022</option>
@@ -29,9 +29,10 @@
 
 <hr />
 
+<p>Resumo</p>
 <table class="table table-sm table-hover"> @*Atualizar com o loop*@
     <thead>
-        <tr  class="table-dark">
+        <tr class="table-dark">
             <th>
                 Tipo
             </th>
@@ -103,6 +104,7 @@
 
 <hr />
 
+<p>Resumo por Grupo</p>
 <table class="table table-striped table-sm table-hover">
     <thead>
         <tr  class="table-dark">
