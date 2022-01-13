@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GestaoFinanceira;
 using GestaoFinanceira.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GestaoFinanceira.Controllers
 {
@@ -20,6 +21,7 @@ namespace GestaoFinanceira.Controllers
             _context = context;
         }
 
+        //[Authorize]
         // GET: Lancamento
         public async Task<IActionResult> Index(string ano)
         {
@@ -165,6 +167,19 @@ namespace GestaoFinanceira.Controllers
             var grupoCartaoD10 = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
                 .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
                 .Where(l => l.GrupoId == 6)
+                .Sum(l => l.Valor)
+                //.GroupBy(l => l.GrupoId)
+                //.Select(g => new { GrupoId = g.Key, Valor = g.Sum(l => l.Valor) })
+                ;
+
+            ViewBag.GrupoCartaoD10 = grupoCartaoD10;
+
+            return View();
+
+            //Grupo CartaoD15
+            var grupoCartaoD15 = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+                .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
+                .Where(l => l.GrupoId == 7)
                 .Sum(l => l.Valor)
                 //.GroupBy(l => l.GrupoId)
                 //.Select(g => new { GrupoId = g.Key, Valor = g.Sum(l => l.Valor) })

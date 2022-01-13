@@ -244,7 +244,6 @@ C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\bin\Debug\net6.0
 C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\obj\Debug\net6.0\GestaoFinanceira.csproj.AssemblyReference.cache
 C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\obj\Debug\net6.0\GestaoFinanceira.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\obj\Debug\net6.0\GestaoFinanceira.AssemblyInfoInputs.cache
 C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\obj\Debug\net6.0\GestaoFinanceira.AssemblyInfo.cs
@@ -262,3 +261,4 @@ C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\obj\Debug\net6.0
 C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\obj\Debug\net6.0\ref\GestaoFinanceira.dll
 C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\obj\Debug\net6.0\GestaoFinanceira.pdb
 C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\obj\Debug\net6.0\GestaoFinanceira.genruntimeconfig.cache
+C:\Users\Cliente\source\repos\GestaoFinanceira\GestaoFinanceira\obj\Debug\net6.0\GestaoFinanceira.csproj.AssemblyReference.cache

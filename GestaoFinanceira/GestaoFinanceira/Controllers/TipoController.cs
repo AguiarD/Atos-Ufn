@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GestaoFinanceira;
 using GestaoFinanceira.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GestaoFinanceira.Controllers
 {
@@ -20,6 +21,7 @@ namespace GestaoFinanceira.Controllers
             _context = context;
         }
 
+        //[Authorize]
         // GET: Tipo
         public async Task<IActionResult> Index()
         {

@@ -22,6 +22,8 @@ namespace GestaoFinanceira
             optionsBuilder.UseLazyLoadingProxies();
         }
 
+        public DbSet<GestaoFinanceira.Models.Usuario> Usuario { get; set; }
+
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
             /*modelBuilder.Entity<Scout>()
