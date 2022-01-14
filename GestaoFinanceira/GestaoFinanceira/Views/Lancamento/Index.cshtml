@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1 id="anoH1">Lançamentos @ViewBag.Ano</h1>
+<h1 id="anoH1">Lançamentos - <a class="pResumo">@ViewBag.Mes/@ViewBag.Ano</a></h1>
 
 
 @*<form>*@
@@ -12,6 +12,27 @@
 {
     <div class="containerForm">
         <div class="input-group mb-3">
+            @*<label>Mes</label>*@
+            <select class="form-control" id="mes" name="mes" onchange="funcaoMes(this.value)">
+                <option disabled selected>Mes</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                @*@foreach (var lancamento in @Model)
+                {
+                    <option>@lancamento.DtPrevisao.Year</option>
+                }*@
+            </select>
+
             @*<label>Ano</label>*@
             <select class="form-control" id="ano" name="ano" onchange="funcaoAno(this.value)">
                 <option disabled selected>Ano</option>

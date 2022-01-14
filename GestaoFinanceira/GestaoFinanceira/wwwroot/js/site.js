@@ -15,3 +15,8 @@ function funcaoAno(ano) {
     ano.getElementById('anoH1').value = ano;
 }
 
+function funcaoMes(mes) {
+    var selectMes = mes;
+
+    mes.getElementById('anoH1').value = mes;
+}

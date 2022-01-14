@@ -17,10 +17,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.DescGrupo)
             </th>
-            <th>
+@*            <th>
                 @Html.DisplayNameFor(model => model.Inativo)
-            </th>
-            <th></th>
+            </th>*@
+            <th>Admin</th>
         </tr>
     </thead>
     <tbody>
@@ -29,13 +29,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DescGrupo)
             </td>
-            <td>
+@*            <td>
                 @Html.DisplayFor(modelItem => item.Inativo)
-            </td>
+            </td>*@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id" title="Editar"><img src=~/css/editar.png></a> |
-                <a asp-action="Details" asp-route-id="@item.Id" title="Detalhes"><img src=~/css/detalhes.png></a> |
-                <a asp-action="Delete" asp-route-id="@item.Id" title="Deletar"><img src=~/css/deletar.png></a>
+                <a asp-action="Details" asp-route-id="@item.Id" title="Detalhes"><img src=~/css/detalhes.png></a>@* |
+                <a asp-action="Delete" asp-route-id="@item.Id" title="Deletar"><img src=~/css/deletar.png></a>*@
             </td>
         </tr>
 }

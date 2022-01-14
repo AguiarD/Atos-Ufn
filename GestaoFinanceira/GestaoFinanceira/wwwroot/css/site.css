@@ -53,13 +53,13 @@ main h1 {
 }
 
 .navNovo a {
-    text-decoration: none;
+    /*text-decoration: none;*/
     font-weight: bold;
     color: green;
 }
 
 .navNovo a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /*.form-group {
@@ -82,7 +82,7 @@ main h1 {
 }*/
 
 .containerForm {
-    max-width: 30%;
+    max-width: 20%;
 }
 
 .table {
@@ -115,6 +115,14 @@ a img {
 
 .pResumo {
     font-weight: bolder;
+    color: green;
+    text-decoration: none;
+}
+
+.pResumo a:hover {
+    font-weight: bolder;
+    color: green;
+    text-decoration: none;
 }
 
 .deleteConfirma {

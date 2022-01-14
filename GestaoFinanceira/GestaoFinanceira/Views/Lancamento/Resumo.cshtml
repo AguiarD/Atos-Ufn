@@ -5,7 +5,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Resumo - @ViewBag.Ano</h1>
+<h1>Resumo - <a class="pResumo">@ViewBag.Mes/@ViewBag.Ano</a></h1>
 
 
 @*<form>*@
@@ -13,9 +13,30 @@
 {
     <div  class="containerForm">
         <div  class="input-group mb-3">
+            @*<label>Mes</label>*@
+            <select class="form-control" id="mes" name="mes" onchange="funcaoMes(this.value)">
+                <option disabled selected>Mes</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                @*@foreach (var lancamento in @Model)
+                {
+                    <option>@lancamento.DtPrevisao.Year</option>
+                }*@
+            </select>
+
             @*<label>Ano</label>*@
             <select class="form-control" id="ano" name="ano" onchange="funcaoAno(this.value)">
-                <option disabled selected>Informe o ano</option>
+                <option disabled selected>Ano</option>
                 <option>2020</option>
                 <option>2021</option>
                 <option>2022</option>
@@ -48,19 +69,19 @@
         <tr class="table-secondary">
             <td colspan="2">Geral</td>
         </tr>
-        <tr class="tableReceita">
-            <td>
+        <tr>
+            <td class="tableReceita">
                 Receita
             </td>
-            <td>
+            <td class="tableReceita">
                 @ViewBag.Receita
             </td>
         </tr>
-        <tr class="tableDespesa">
-            <td>
+        <tr>
+            <td class="tableDespesa">
                 Despesa
             </td>
-            <td>
+            <td class="tableDespesa">
                 @ViewBag.Despesa
             </td>
         </tr>
@@ -77,19 +98,19 @@
         <tr class="table-secondary">
             <td colspan="2">Aberto</td>
         </tr>
-        <tr class="tableReceita">
-            <td>
+        <tr>
+            <td class="tableReceita">
                 Receita
             </td>
-            <td>
+            <td class="tableReceita">
                 @ViewBag.ReceitaAberto
             </td>
         </tr>
-        <tr class="tableDespesa">
-            <td>
+        <tr>
+            <td class="tableDespesa">
                 Despesa
             </td>
-            <td>
+            <td class="tableDespesa">
                 @ViewBag.DespesaAberto
             </td>
         </tr>
@@ -118,31 +139,31 @@
     <tbody>
         <tr>
             <td>Pessoal</td>
-            <td>@ViewBag.GrupoPessoal</td>
+            <td class="tableReceita">@ViewBag.GrupoPessoal</td>
         </tr>
         <tr>
             <td>Casa</td>
-            <td>@ViewBag.GrupoCasa</td>
+            <td class="tableDespesa">@ViewBag.GrupoCasa</td>
         </tr>
         <tr>
             <td>Trabalho</td>
-            <td>@ViewBag.GrupoTrabalho</td>
+            <td class="tableDespesa">@ViewBag.GrupoTrabalho</td>
         </tr>
         <tr>
             <td>Transporte</td>
-            <td>@ViewBag.GrupoTransporte</td>
+            <td class="tableDespesa">@ViewBag.GrupoTransporte</td>
         </tr>
         <tr>
             <td>Reserva</td>
-            <td>@ViewBag.GrupoReserva</td>
+            <td class="tableDespesa">@ViewBag.GrupoReserva</td>
         </tr>
         <tr>
             <td>Cartao dia 10</td>
-            <td>@ViewBag.GrupoCartaoD10</td>
+            <td class="tableDespesa">@ViewBag.GrupoCartaoD10</td>
         </tr>
         <tr>
             <td>Cartao dia 15</td>
-            <td>@ViewBag.GrupoCartaoD10</td>
+            <td class="tableDespesa">@ViewBag.GrupoCartaoD15</td>
         </tr>
     </tbody>
 </table>
