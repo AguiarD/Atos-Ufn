@@ -209,6 +209,18 @@ namespace GestaoFinanceira.Controllers
 
             ViewBag.GrupoCartaoD15 = grupoCartaoD15;
 
+            //Grupo Pet
+            var grupoPet = _context.Lancamentos.Include(l => l.Contas).Include(l => l.Grupos).Include(l => l.Tipos)
+                .Where(l => l.DtPrevisao.Year == Convert.ToInt32(ano))
+                .Where(l => l.DtPrevisao.Month == Convert.ToInt32(mes))
+                .Where(l => l.GrupoId == 8)
+                .Sum(l => l.Valor)
+                //.GroupBy(l => l.GrupoId)
+                //.Select(g => new { GrupoId = g.Key, Valor = g.Sum(l => l.Valor) })
+                ;
+
+            ViewBag.GrupoPet = grupoPet;
+
             return View();
         }
 

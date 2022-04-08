@@ -1,0 +1,170 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.navbar {
+    background: linear-gradient(#dcdbd6, #808080);
+}
+
+.navbar-light .navbar-brand {
+    color: green;
+}
+
+.navbar a {
+    /*color: antiquewhite;*/
+    font-weight: bolder;
+}
+
+body {
+    margin-bottom: 60px;
+    /*background: #f6efcc;*/
+    background: linear-gradient(#faedaf, #fffef9);
+}
+
+main h1 {
+    text-align: center;
+}
+
+.table {
+    text-align: center;
+}
+
+.navNovo ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+    /*background: #ffffff;*/
+    border-radius: 5px;
+}
+
+.navNovo li {
+    display: inline;
+}
+
+.navNovo a {
+    /*text-decoration: none;*/
+    font-weight: bold;
+    color: green;
+}
+
+.navNovo a:hover {
+    text-decoration: none;
+}
+
+/*.form-group {
+    text-align: -webkit-center;
+}
+
+.form-control {
+    align-items: center;
+    width: 10%;
+    text-align: center;
+}*/
+
+/*.formLancamento {
+    width: 40%;
+    display: flex;
+}
+
+.formLancamento select {
+    max-width: 20%;
+}*/
+
+.containerForm {
+    max-width: 20%;
+}
+
+.table {
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.tableReceita {
+    color: darkgreen;
+    font-weight: bolder;
+}
+
+.tableDespesa {
+    color: darkred;
+    font-weight: bolder;
+}
+
+.table-secondary td{
+    font-weight: bolder;
+}
+
+.table a {
+    text-decoration: none;
+    color: green;
+}
+
+a img {
+    height: 22px;
+}
+
+.pResumo {
+    font-weight: bolder;
+    color: green;
+    text-decoration: none;
+}
+
+.pResumo a:hover {
+    font-weight: bolder;
+    color: green;
+    text-decoration: none;
+}
+
+.deleteConfirma {
+    color: darkred;
+}
+
+/*.navNovo {*/
+    /* position: absolute; */
+    /*top: auto;
+    right: 0;
+    max-width: 440px;
+    text-align: center;
+}
+
+.navNovo ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navNovo li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+.navNovo a {
+    text-transform: uppercase;*/
+    /*color: darkorange;*/
+    /*font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+ .navNovo a:hover {
+     color: black;
+     text-decoration: underline;
+ }
+
+ .navNovo a:active {
+     color: rgb(29, 29, 88);
+ }*/
+
+/*.atual {*/
+    /* color: orange; */
+    /*text-decoration: underline;
+}*/

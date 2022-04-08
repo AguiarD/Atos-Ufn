@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>@ViewBag.Title</h1>
+<hr />
+
+<div class="row justify-content-md-center">
+    <div class="card col-3">
+        <div class="card-body text-center">
+            <p>Visualização da lista de clientes registrados na aplicação.</p>
+            <br />
+            <a asp-controller="home" asp-action="lista_clientes" class="btn btn-primary">Lista de clientes</a>
+        </div>
+    </div>
+
+    <div class="card col-3">
+        <div class="card-body text-center">
+            <p>Visualização da lista de clientes registrados na aplicação.</p>
+            <br />
+            <a asp-controller="home" asp-action="adcionar_clientes" class="btn btn-primary">Adcionar clientes</a>            
+        </div>
+    </div>
+</div>
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
